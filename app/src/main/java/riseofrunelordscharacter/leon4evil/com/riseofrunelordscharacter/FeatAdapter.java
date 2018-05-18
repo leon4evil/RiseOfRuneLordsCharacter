@@ -107,6 +107,7 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
                             macomponentcheckbox.setVisibility(View.VISIBLE);
                             macomponentcheckbox.setOnCheckedChangeListener(null);//this line is important --
                             macomponentcheckbox.setFocusable(false);
+                            macomponentcheckbox.setText(thispower.getComponents().get(i).getDescription()); //if there is a description for the checkbox
                             macomponentcheckbox.setChecked(checkboxIsCheckedlist.get(position).get(i));//if it was checked before check it
                                                                                                        //when it comes to screen
                             macomponentcheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -126,7 +127,7 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
                         }else{//not a checkbox then
                             TextView macomponenttextview = new TextView(parent.getContext());
                             macomponenttextview.setGravity(Gravity.CENTER);
-                            macomponenttextview.setText(thispower.getComponents().get(i).getLabel());
+                            macomponenttextview.setText(thispower.getComponents().get(i).getDescription());
                             maFlexboxLayout.addView(macomponenttextview);
                         }
                     }

@@ -2,25 +2,26 @@ package riseofrunelordscharacter.leon4evil.com.riseofrunelordscharacter;
 
 public class StringComponent implements IComponent {
 
-    //SUCK IT DRY BITCH
+    private String description;
 
-    String value;
-    StringComponent(String givenvalue){
-        value = givenvalue;
-
+    public StringComponent(String givenvalue){
+        description = givenvalue;
     }
 
     //getters
-    String getValue(){
-        return value;
+    @Override
+    public String getDescription(){
+        return description;
     }
     //setters
-    public void setValue(String value) {
-        this.value = value;
+    @Override
+    public void setDescription(String givenDescrition) {
+        this.description = description;
     }
 
     @Override
-    public String getLabel() {
-        return value;
+    public void printComponent(){
+
     }
+
 }

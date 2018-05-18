@@ -4,6 +4,9 @@ import android.os.Parcelable;
 
 public interface IComponent {
 
-    String getLabel();
+
+    String getDescription();
+    void setDescription(String givenDescription);
+    void printComponent();
 
 }

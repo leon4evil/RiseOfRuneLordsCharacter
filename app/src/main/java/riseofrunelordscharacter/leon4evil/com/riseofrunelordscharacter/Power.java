@@ -63,7 +63,7 @@ public class Power extends Feat {
                   if (powerComponents.get(i) instanceof StringComponent){
                      out.writeInt(19); //19 is for 's' number 19 letter in alphabet
                      StringComponent se = (StringComponent) powerComponents.get(i);
-                     out.writeString(se.getValue());
+                     out.writeString(se.getDescription());
                      out.writeInt(11);
 
                  }
@@ -71,11 +71,11 @@ public class Power extends Feat {
                      CheckboxComponent cc = (CheckboxComponent) powerComponents.get(i);
                      out.writeInt(3); //3 is for 'c' number 3 letter in alphabet
                      if(cc.isChecked()==false){
-                         out.writeString("");
+                         out.writeString(powerComponents.get(i).getDescription());
                          out.writeInt(0);
                      }
                      else{
-                         out.writeString("");
+                         out.writeString(powerComponents.get(i).getDescription());
                          out.writeInt(1);
                      }
                  }
@@ -102,6 +102,7 @@ public class Power extends Feat {
             if(stringorcheckedbox == 3){
                 stupedString = in.readString();
                 CheckboxComponent cc = new CheckboxComponent();
+                cc.setDescription(stupedString);
                 isChecked = in.readInt();
                 if(isChecked == 0){
                     cc.setChecked(false);
