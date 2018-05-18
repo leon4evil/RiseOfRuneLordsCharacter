@@ -2,6 +2,8 @@ package riseofrunelordscharacter.leon4evil.com.riseofrunelordscharacter;
 
 public class StringComponent implements IComponent {
 
+    //SUCK IT DRY BITCH
+
     String value;
     StringComponent(String givenvalue){
         value = givenvalue;
