@@ -18,14 +18,23 @@ public class Skill extends Feat {
     private int basedie;
     private int added;
     private String name;
+    private List<IComponent> skillComponents= new ArrayList<>();
 
 
     //constructor
     public Skill(String givenName,int givenBasedie,int givenAdded) {
-        super(givenName,0);
+        super(givenName);
         name = givenName;
         basedie = givenBasedie;
         added = givenAdded;
+    }
+
+    public Skill(String givenName, int givenBasedie, int givenAdded, List<IComponent> givenComponentList){
+        super("");
+        name=givenName;
+        basedie=givenBasedie;
+        added = givenAdded;
+        skillComponents = new ArrayList<IComponent>(givenComponentList);
     }
 
 
@@ -70,8 +79,12 @@ public class Skill extends Feat {
 
     @Override
     public List<IComponent> getComponents(){
-        return new ArrayList<IComponent>();
+        return skillComponents;
 
+    }
+    @Override
+    public void addComponents(List<IComponent> givenComponentList){
+        skillComponents = new ArrayList<IComponent>(givenComponentList);
     }
 
     /////////////////Parceling part/////////////////////////
@@ -84,6 +97,32 @@ public class Skill extends Feat {
         out.writeInt(basedie);
         out.writeInt(added);
 
+        out.writeInt(skillComponents.size());
+
+        for(int i = 0; skillComponents.size() > i; i++){
+            if (skillComponents.get(i) instanceof StringComponent){
+                out.writeInt(19); //19 is for 's' number 19th letter in alphabet
+                StringComponent se = (StringComponent) skillComponents.get(i);
+                out.writeString(se.getDescription());
+                out.writeInt(11);
+
+            }
+            else{
+                CheckboxComponent cc = (CheckboxComponent) skillComponents.get(i);
+                out.writeInt(3); //3 is for 'c' number 3rd letter in alphabet
+                if(cc.isChecked()==false){
+                    out.writeString(skillComponents.get(i).getDescription());
+                    out.writeInt(0);
+                }
+                else{
+                    out.writeString(skillComponents.get(i).getDescription());
+                    out.writeInt(1);
+                }
+            }
+        }
+
+
+
     }
     //Reading
     public Skill(Parcel in){
@@ -91,6 +130,37 @@ public class Skill extends Feat {
         name =  in.readString();
         basedie = in.readInt();
         added = in.readInt();
+
+        int numcomponents = in.readInt();
+        int stringorcheckedbox;
+        int isChecked;
+        int sumRandomint;
+        String stupedString;
+
+        for(int i =0;i<numcomponents;i++){
+            stringorcheckedbox = in.readInt();
+            if(stringorcheckedbox==19){
+                StringComponent sc =new StringComponent(in.readString());
+                skillComponents.add(sc);
+                sumRandomint=in.readInt();
+            }
+            if(stringorcheckedbox == 3){
+                stupedString = in.readString();
+                CheckboxComponent cc = new CheckboxComponent();
+                cc.setDescription(stupedString);
+                isChecked = in.readInt();
+                if(isChecked == 0){
+                    cc.setChecked(false);
+                }
+                else{
+                    cc.setChecked(true);
+                }
+                skillComponents.add(cc);
+            }
+        }
+
+
+
     }
 
     //Others

@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Separator extends Feat {
-    public Separator(String givenName, int isseparator) {
-        super(givenName, isseparator);
+    public Separator(String givenName) {
+        super(givenName);
     }
 
     protected Separator(Parcel in){
@@ -24,6 +24,8 @@ public class Separator extends Feat {
         return new ArrayList<IComponent>();
 
     }
+    public void addComponents(List<IComponent> componentList){}
+    public void setName(String givenName){}
 
 
 

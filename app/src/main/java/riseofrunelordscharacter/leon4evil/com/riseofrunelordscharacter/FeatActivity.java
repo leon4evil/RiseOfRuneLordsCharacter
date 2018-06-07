@@ -18,28 +18,11 @@ public class FeatActivity extends AppCompatActivity {
         gameCharacter maCharacter = getIntent().getParcelableExtra("clickedCharacter");
         Log.d("character name",maCharacter.getCharacterName());
 
-        maCharacter.printFeats();
-
+        //Always order feats before handing to adapter(orders and adds separators)
         maCharacter.orderFeats();
-        //maCharacter.printFeats();
 
 
-        /*gameCharacter Warrior = new gameCharacter("Bill","Warrior");
-        Warrior.addFeat(new Skill("Strength",6,2));
-        Warrior.addFeat(new Skill("Strength",6,2));
-        Warrior.addFeat(new Power("Hand Size","im just awesome like that"));
-        Warrior.addFeat(new Skill("Strength",6,2));
-        Warrior.addFeat(new Power("Hand Size","im just awesome like that"));
-        Warrior.addFeat(new Power("Hand Size","im just awesome like that"));
-        Warrior.addFeat(new Skill("Strength",6,2));
-        Warrior.addFeat(new Skill("Strength",6,2));
-        Log.d("separate","HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA");
-        Warrior.printFeats();
-        Warrior.orderFeats();
-        Log.d("separate","HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA");
-        Warrior.printFeats();*/
-
-
+        //Feat Adapter Helps us display feats
         FeatAdapter adapter= new FeatAdapter(this,maCharacter.getCharacterFeats());
         ListView listview = (ListView) findViewById(R.id.featlist);
         listview.setAdapter(adapter);

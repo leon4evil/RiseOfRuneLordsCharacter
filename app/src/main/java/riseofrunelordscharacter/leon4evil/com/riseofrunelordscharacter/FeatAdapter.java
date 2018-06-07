@@ -33,106 +33,109 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
     private ArrayList <ArrayList <Boolean>> checkboxIsCheckedlist = new ArrayList<ArrayList<Boolean>>();
 
     //private int backgroundColor;
-        public FeatAdapter(Context context , ArrayList<Feat> feats){ //subclass constructor
-            super(context,0,feats);
+    public FeatAdapter(Context context , ArrayList<Feat> feats){ //subclass constructor
+        super(context,0,feats);
 
         for(int i =0;i<feats.size();i++){
             checkboxIsCheckedlist.add(new ArrayList<Boolean>());
             for(int j = 0;j<feats.get(i).getComponents().size();j++) {
-
-                checkboxIsCheckedlist.get(i).add(false);
-            }
-        }
-                Log.d("fucking with you","HAHA everything is false");
-                Log.d("this is the2DArraylist", checkboxIsCheckedlist.toString());
-        }
-
-        @NonNull
-        @Override
-        public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-
-            // Check if the existing view is being reused, otherwise inflate the view
-            View listItemView = convertView;
-
-            if(listItemView == null) {
-                listItemView = LayoutInflater.from(getContext()).inflate(
-                        R.layout.list_view_item, parent, false);
-
-
-            }
-            Feat feat = getItem(position);
-            final FlexboxLayout maFlexboxLayout = listItemView.findViewById(R.id.flexboxlayout);
-
-            //I guess this is where we're adding default text view to listItemView
-            if(feat.isSeparator()==1){ //if separator
-                if(((FlexboxLayout) maFlexboxLayout).getChildCount() > 0) { //clear layout in current listviewItem
-                    ((FlexboxLayout) maFlexboxLayout).removeAllViews();
-                    ((FlexboxLayout) maFlexboxLayout).removeAllViews();
-                }
-
-                TextView feattextview = (TextView) listItemView.findViewById(R.id.textview);
-                feattextview.setText(feat.getName()+"s");
-                feattextview.setTextColor(Color.WHITE);  //text color
-                listItemView.setBackgroundColor(Color.BLACK);//backgorund color
-                //modifying size of listview Item if its a separator
-                listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(330*parent.getContext().getResources().getDisplayMetrics().density),100));
-
-            }
-            else { //then its skill or power
-                if(((FlexboxLayout) maFlexboxLayout).getChildCount() > 0) { //clear layout in current listviewItem
-                    ((FlexboxLayout) maFlexboxLayout).removeAllViews();
-                }
-                listItemView.setBackgroundColor(Color.WHITE);
-                TextView feattextview = (TextView) listItemView.findViewById(R.id.textview);
-
-
-                feattextview.setTextColor(Color.parseColor("#808080"));
-                listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(330*parent.getContext().getResources().getDisplayMetrics().density),(int)(119*parent.getContext().getResources().getDisplayMetrics().density)));
-
-
-                if(feat instanceof Skill) {//if Skill
-                    feattextview.setText(feat.getLabel());
-                }
-                else{// power then
-                    Power thispower = (Power)feat;
-                    feattextview.setText(thispower.getLabel());
-
-                    for(int i = 0; i<thispower.getComponents().size();i++){ //get components in this feat and put them in listviewItem
-                        Log.d("class type",thispower.getComponents().get(i).getClass().toString());
-
-                        if(thispower.getComponents().get(i) instanceof CheckboxComponent){ //if component is checkbox
-                            CheckBox macomponentcheckbox = new CheckBox(parent.getContext());
-                           // macomponentcheckbox.setGravity(Gravity.CENTER);
-
-                            macomponentcheckbox.setVisibility(View.VISIBLE);
-                            macomponentcheckbox.setOnCheckedChangeListener(null);//this line is important --
-                            macomponentcheckbox.setFocusable(false);
-                            macomponentcheckbox.setText(thispower.getComponents().get(i).getDescription()); //if there is a description for the checkbox
-                            macomponentcheckbox.setChecked(checkboxIsCheckedlist.get(position).get(i));//if it was checked before check it
-                                                                                                       //when it comes to screen
-                            macomponentcheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                                @Override
-                                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                                    if(isChecked ){
-                                        checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), true);
-                                    }else{
-                                        checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), false);
-                                    }
-                                }
-                            });
-
-                            maFlexboxLayout.addView(macomponentcheckbox);
-                            Log.d("checkbox","checkbox added to layout!!!");
-
-                        }else{//not a checkbox then
-                            TextView macomponenttextview = new TextView(parent.getContext());
-                            macomponenttextview.setGravity(Gravity.CENTER);
-                            macomponenttextview.setText(thispower.getComponents().get(i).getDescription());
-                            maFlexboxLayout.addView(macomponenttextview);
-                        }
+                if(feats.get(i).getComponents().get(j) instanceof CheckboxComponent) {
+                    if(((CheckboxComponent) feats.get(i).getComponents().get(j)).isChecked()){
+                        checkboxIsCheckedlist.get(i).add(true);
+                    }else{
+                        checkboxIsCheckedlist.get(i).add(false);
                     }
+                }else{
+                    checkboxIsCheckedlist.get(i).add(false);
                 }
             }
+        }
+        Log.d("fucking with you","HAHA everything is false");
+        Log.d("this is the2DArraylist", checkboxIsCheckedlist.toString());
+    }
+
+    @NonNull
+    @Override
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
+        // Check if the existing view is being reused, otherwise inflate the view
+        View listItemView = convertView;
+
+        if(listItemView == null) {
+            listItemView = LayoutInflater.from(getContext()).inflate(
+                    R.layout.list_view_item, parent, false);
+
+
+        }
+        Feat feat = getItem(position);
+        final FlexboxLayout maFlexboxLayout = listItemView.findViewById(R.id.flexboxlayout);
+
+        //I guess this is where we're adding default text view to listItemView
+        if(feat instanceof Separator){ //if separator
+            if(((FlexboxLayout) maFlexboxLayout).getChildCount() > 0) { //clear layout in current listviewItem
+                ((FlexboxLayout) maFlexboxLayout).removeAllViews();
+                ((FlexboxLayout) maFlexboxLayout).removeAllViews();
+            }
+
+            TextView feattextview = (TextView) listItemView.findViewById(R.id.textview);
+            feattextview.setText(feat.getName()+"s");
+            feattextview.setTextColor(Color.WHITE);  //text color
+            listItemView.setBackgroundColor(Color.BLACK);//backgorund color
+            //modifying size of listview Item if its a separator
+            //listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(330*parent.getContext().getResources().getDisplayMetrics().density),100));
+            listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(parent.getWidth()),100));
+
+        }
+        else { //then its skill or power
+            if(((FlexboxLayout) maFlexboxLayout).getChildCount() > 0) { //clear layout in current listviewItem
+                ((FlexboxLayout) maFlexboxLayout).removeAllViews();
+            }
+            listItemView.setBackgroundColor(Color.WHITE);
+            TextView feattextview = (TextView) listItemView.findViewById(R.id.textview);
+
+
+            feattextview.setTextColor(Color.parseColor("#808080"));
+            listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(parent.getWidth()),(int)(119*parent.getContext().getResources().getDisplayMetrics().density)));
+
+
+            //show feat and its components
+            feattextview.setText(feat.getLabel());
+            for(int i = 0; i<feat.getComponents().size();i++){ //get components in this feat and put them in listviewItem
+                Log.d("class type",feat.getComponents().get(i).getClass().toString());
+
+                if(feat.getComponents().get(i) instanceof CheckboxComponent){ //if component is checkbox
+                    CheckBox macomponentcheckbox = new CheckBox(parent.getContext());
+                    // macomponentcheckbox.setGravity(Gravity.CENTER);
+
+                    macomponentcheckbox.setVisibility(View.VISIBLE);
+                    macomponentcheckbox.setOnCheckedChangeListener(null);//this line is important
+                    macomponentcheckbox.setFocusable(false);
+                    macomponentcheckbox.setText(feat.getComponents().get(i).getDescription()); //if there is a description for the checkbox
+                    macomponentcheckbox.setChecked(checkboxIsCheckedlist.get(position).get(i));//if it was checked before check it
+                    //when it comes to screen
+                    macomponentcheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                        @Override
+                        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                            if(isChecked ){
+                                checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), true);
+                            }else{
+                                checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), false);
+                            }
+                        }
+                    });
+
+                    maFlexboxLayout.addView(macomponentcheckbox);
+                    Log.d("checkbox","checkbox added to layout!!!");
+
+                }else{//not a checkbox then
+                    TextView macomponenttextview = new TextView(parent.getContext());
+                    macomponenttextview.setGravity(Gravity.CENTER);
+                    macomponenttextview.setText(feat.getComponents().get(i).getDescription());
+                    maFlexboxLayout.addView(macomponenttextview);
+                }
+            }
+
+        }
 
             /*//set the theme color for the list item
             View textContainer =listItemView.findViewById(R.id.text_container);
@@ -141,6 +144,6 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
             //Set the background of the text container view
             textContainer.setBackgroundColor(color);*/
 
-            return listItemView;
-        }
+        return listItemView;
+    }
 }

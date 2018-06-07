@@ -14,7 +14,7 @@
 
 				<component>
 					<checkbox>
-						<ischecked>notchecked</ischecked>
+						<ischecked>checked</ischecked>
 						<description>+1</description>
 					</checkbox>
 				</component>

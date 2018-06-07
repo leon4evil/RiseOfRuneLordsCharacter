@@ -15,13 +15,12 @@ public class StringComponent implements IComponent {
     }
     //setters
     @Override
-    public void setDescription(String givenDescrition) {
-        this.description = description;
+    public void setDescription(String givenDescription) {
+        this.description = givenDescription;
     }
 
     @Override
     public void printComponent(){
 
     }
-
 }

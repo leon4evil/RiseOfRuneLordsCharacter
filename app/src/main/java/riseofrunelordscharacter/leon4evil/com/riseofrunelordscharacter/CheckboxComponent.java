@@ -12,6 +12,10 @@ public class CheckboxComponent implements IComponent {
         description = "";
 
     }
+    public CheckboxComponent(String givenDescription){
+        description = givenDescription;
+    }
+
     public CheckboxComponent(int i){
         if(i==0){
             isChecked = false;

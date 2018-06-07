@@ -48,6 +48,15 @@ public class gameCharacter implements Parcelable {
         characterFeats.add(givenFeat);
     }
 
+    public void addFeatList(List<Feat> givenFeatList){
+        if(characterFeats.size() <=0 ){
+            Collections.copy(givenFeatList,characterFeats);
+        }
+        else{
+            characterFeats.addAll(givenFeatList);
+        }
+    }
+
     public void printFeats() { //Prints feats to log
         for (int x = 0; x < characterFeats.size(); x++) {
             characterFeats.get(x).printFeat();
@@ -73,7 +82,7 @@ public class gameCharacter implements Parcelable {
     }
 
     //this method puts separators on the character feats
-    //hugely inefficient this hole method could be avoided if we organi¡ze feats when we
+    //hugely inefficient this hole method could be avoided if we organ¡ze feats when we
     // add them as opposed to later
     private void addSeparators(){
         //make sure there is no separators already
@@ -87,7 +96,7 @@ public class gameCharacter implements Parcelable {
 
             // create and add generic feat at beginning of character feats
             //to be first separator
-            Feat separator1 = new Separator(diviedupString[diviedupString.length - 1], 1);
+            Feat separator1 = new Separator(diviedupString[diviedupString.length - 1]);
             characterFeats.add(0, separator1);
 
             //and when we find a different type of object
@@ -99,7 +108,7 @@ public class gameCharacter implements Parcelable {
             for (int x = 2; currentfeatlistsize >= x; x++) {
                 if (characterFeats.get(mostrecentseparator).getClass() != characterFeats.get(x).getClass()) {
                     seconddiviedupString = characterFeats.get(x).getClass().toString().split("[.]");
-                    aSeparator = new Separator(seconddiviedupString[seconddiviedupString.length - 1], 1);
+                    aSeparator = new Separator(seconddiviedupString[seconddiviedupString.length - 1]);
                     characterFeats.add(x, aSeparator);
                     mostrecentseparator = x + 1;
                     x++;
@@ -111,7 +120,7 @@ public class gameCharacter implements Parcelable {
     }
     private void removeSeparators(){
         for(int x = 0;x<characterFeats.size();x++){
-            if(characterFeats.get(x).isSeparator()==1) {
+            if(characterFeats.get(x) instanceof Separator) {
                 characterFeats.remove(x);
             }
         }

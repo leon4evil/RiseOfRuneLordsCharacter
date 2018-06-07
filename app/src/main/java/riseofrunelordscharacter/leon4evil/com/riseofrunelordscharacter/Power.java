@@ -13,22 +13,36 @@ import java.util.List;
 
 public class Power extends Feat {
 
-    private List<IComponent> powerComponents = new ArrayList<>();
+    private List<IComponent> powerComponents= new ArrayList<>();
 
-    public Power(String giveName, List<IComponent> givePowerComponents){
-        super(giveName,0);
+    public Power(){
+        super("");
+        //powerComponents = new ArrayList<>();
+    }
+
+    public Power(String givenName, List<IComponent> givePowerComponents){
+        super(givenName);
         powerComponents = givePowerComponents;
 
     }
 
     public Power(List<IComponent> givenPowerComponents){
-        super(null,0);
+        super("");
         powerComponents = givenPowerComponents;
     }
     @Override
     public  List<IComponent> getComponents(){
         return powerComponents;
+    }
 
+    @Override
+    public void addComponents(List<IComponent> givenComponentList){
+        powerComponents = new ArrayList<IComponent>(givenComponentList);
+    }
+
+    @Override
+    public void setName(String givenString){
+        name = givenString;
     }
 
     @Override
@@ -56,12 +70,12 @@ public class Power extends Feat {
     @Override
     public void writeToParcel(Parcel out, int flags) {
         super.writeToParcel(out,flags);
-        out.writeString(name);
+        out.writeString(this.getName());
         out.writeInt(powerComponents.size());
 
             for(int i = 0; powerComponents.size() > i; i++){
                   if (powerComponents.get(i) instanceof StringComponent){
-                     out.writeInt(19); //19 is for 's' number 19 letter in alphabet
+                     out.writeInt(19); //19 is for 's' number 19th letter in alphabet
                      StringComponent se = (StringComponent) powerComponents.get(i);
                      out.writeString(se.getDescription());
                      out.writeInt(11);
@@ -69,7 +83,7 @@ public class Power extends Feat {
                  }
                  else{
                      CheckboxComponent cc = (CheckboxComponent) powerComponents.get(i);
-                     out.writeInt(3); //3 is for 'c' number 3 letter in alphabet
+                     out.writeInt(3); //3 is for 'c' number 3rd letter in alphabet
                      if(cc.isChecked()==false){
                          out.writeString(powerComponents.get(i).getDescription());
                          out.writeInt(0);
@@ -112,9 +126,7 @@ public class Power extends Feat {
                 }
                 powerComponents.add(cc);
             }
-
         }
-
     }
 
     //Others
