@@ -48,16 +48,36 @@ public class CheckboxComponent implements IComponent {
         description = givenDescription;
     }
 
+
+
     @Override
-    public void printComponent() {
-        Log.d("this component is a ","\u25A1");
+    public String printComponent(){
+        String componentString = "\t\t\t\t\t<component>\n"+
+                "\t\t\t\t\t\t<checkbox>\n"+
+                "\t\t\t\t\t\t\t<ischecked>";
+
         if(isChecked==true){
-            Log.d("and it is ","checked");
+            //Log.d("Checkbox Component","is checked");
+            componentString = componentString +"checked";
         }
         else {
-            Log.d("and it is ","not checked");
+            //Log.d("Checkbox Component", "is not checked");
+            componentString = componentString +"notchecked";
+
         }
+        componentString = componentString +"</ischecked>\n\t\t\t\t\t\t<description>"+description+"</description>\n\t\t\t\t\t\t\t</checkbox>\n\t\t\t\t\t\t</component>\n";
+        return componentString;
     }
+//    @Override
+//    public void printComponent() {
+//        Log.d("this component is a ","\u25A1");
+//        if(isChecked==true){
+//            Log.d("and it is ","checked");
+//        }
+//        else {
+//            Log.d("and it is ","not checked");
+//        }
+//    }
 
 //    public String getLabel() {
 //        return "\u25A1";

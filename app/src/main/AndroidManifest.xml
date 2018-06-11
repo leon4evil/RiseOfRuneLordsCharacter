@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FeatActivity"></activity>
+        <activity android:name=".FeatActivity" />
+        <activity android:name=".NewCharacterActivity"></activity>
     </application>
 
 </manifest>

@@ -7,6 +7,6 @@ public interface IComponent {
 
     String getDescription();
     void setDescription(String givenDescription);
-    void printComponent();
+    String printComponent();
 
 }

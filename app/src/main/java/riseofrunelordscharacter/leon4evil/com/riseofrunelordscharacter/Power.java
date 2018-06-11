@@ -58,10 +58,32 @@ public class Power extends Feat {
     }
 
     //other methods
-    @Override
-    public void printFeat(){
-        Log.d("type of Feat","Ima power");
+    //@Override
+    //public void printFeat(){
+    //    Log.d("type of Feat","Ima power");
+    //}
+    public String printFeat(){
+        String featString;
+        //Log.d("Feat name is: ", powername);
+        featString = "<feat>\n" +
+                "\t\t<power>\n"+
+                "\t\t\t<powername>"+name+"</powername>\n";
+
+
+        //"Feat name is: "+ powername+"\n";
+        //Log.d("Feat Type: ",this.getClass().toString());
+        //featString=featString+"Feat Type: "+this.getClass().toString()+"\n";
+        //Log.d("components in this feat",String.valueOf(components.size()));
+        //featString = featString+"components in this feat "+String.valueOf(components.size())+"\n";
+
+        for (IComponent item:powerComponents) {
+            featString = featString+item.printComponent();
+        }
+
+        featString=featString+"\t\t</power>\n </feat>\n";
+        return featString;
     }
+
 
     /////////////////Parceling part/////////////////////////
 

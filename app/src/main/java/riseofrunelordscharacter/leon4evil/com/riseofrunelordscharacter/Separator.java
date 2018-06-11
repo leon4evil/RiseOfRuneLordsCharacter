@@ -27,7 +27,10 @@ public class Separator extends Feat {
     public void addComponents(List<IComponent> componentList){}
     public void setName(String givenName){}
 
-
+    @Override
+    public String printFeat(){
+        return "";
+    }
 
     @Override
     public String getLabel() {

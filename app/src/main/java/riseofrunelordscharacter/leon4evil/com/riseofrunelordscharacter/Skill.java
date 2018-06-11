@@ -71,10 +71,27 @@ public class Skill extends Feat {
     public void setAdded(int added) {
         this.added = added;
     }
-    @Override
-    public void printFeat(){
-        Log.d("type of Feat","Ima skill");
+//    @Override
+//    public void printFeat(){
+//        Log.d("type of Feat","Ima skill");
+//
+//    }
 
+    public String printFeat(){
+
+        //Log.d("Feat name is: ", skillname);
+        String featString = "<feat>\n" +
+                "\t\t<skill>\n"+
+                "\t\t\t<skillname>"+name+"</skillname>\n";
+        //Log.d("Feat Type: ",this.getClass().toString());
+        //featString = featString+"Feat Type: "+this.getClass().toString()+"\n";
+        //Log.d("components in this feat",String.valueOf(components.size()));
+        //featString = featString+"components in this feat"+String.valueOf(components.size())+"\n";
+        for (IComponent item:skillComponents) {
+            featString = featString+item.printComponent();
+        }
+        featString=featString+"\t\t</skill>\n </feat>\n";
+        return featString;
     }
 
     @Override

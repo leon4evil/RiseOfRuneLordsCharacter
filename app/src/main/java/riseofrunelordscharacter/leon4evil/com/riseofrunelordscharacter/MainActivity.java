@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
 
 import android.widget.AdapterView.OnItemClickListener;
 
@@ -20,9 +20,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Character builder gets us a list of Game Characters from an XML
-        CharacterBuilder maCharacterBuilder = new CharacterBuilder("AllCharacters.xml",this);
-        ArrayList<gameCharacter> currentCharacters = new ArrayList<gameCharacter>(maCharacterBuilder.getCharacters());
+        //prep character builder
+        CharacterBuilder maCharacterBuilder;
+        ArrayList<GameCharacter> currentCharacters = new ArrayList<>();
+
+
+
+        //check file path see if there are sum user files already
+        File sdCard = this.getExternalFilesDir(null);
+        File dir = new File(sdCard.getAbsolutePath()+"/thismofoapp");
+
+        if(dir.exists()) {
+            File[] listOfFiles = dir.listFiles();
+
+
+            for (int i = 0; i < listOfFiles.length; i++) {
+
+                Log.d("What is name of file?", listOfFiles[i].getName());
+                maCharacterBuilder = new CharacterBuilder(listOfFiles[i], this);
+                currentCharacters.addAll(maCharacterBuilder.getCharacters());
+            }
+            currentCharacters.add(new NewGameCharacter());
+
+        }else{
+            currentCharacters.add(new NewGameCharacter());
+
+        }
 
         //The adapter helps us display our Game character list
         GameCharacterAdapter adapter= new GameCharacterAdapter(this,currentCharacters);
@@ -35,12 +58,19 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position,long id){
-                Intent numbersIntent = new Intent(MainActivity.this, FeatActivity.class);
-                gameCharacter clickedCharacter = (gameCharacter) listview.getItemAtPosition(position);
-                clickedCharacter.printFeats();
-                //Log.d("wanna see clckied", clickedCharacter.printFeats());
-                numbersIntent.putExtra("clickedCharacter",clickedCharacter);
-                startActivity(numbersIntent);
+                GameCharacter clickedCharacter = (GameCharacter) listview.getItemAtPosition(position);
+
+                if(clickedCharacter.getCharacterName().equals("New Character")) {
+                    Intent newCharacterIntent = new Intent(MainActivity.this,NewCharacterActivity.class);
+                    startActivity(newCharacterIntent);
+                }else{
+                    Intent featIntent = new Intent(MainActivity.this, FeatActivity.class);
+
+                    clickedCharacter.printFeats();
+                    //Log.d("wanna see clckied", clickedCharacter.printFeats());
+                    featIntent.putExtra("clickedCharacter",clickedCharacter);
+                    startActivity(featIntent);
+                }
             }
         });
 

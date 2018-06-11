@@ -20,7 +20,12 @@ public class StringComponent implements IComponent {
     }
 
     @Override
-    public void printComponent(){
-
+    public String printComponent(){
+        //Log.d("Component type",this.getClass().toString());
+        //Log.d("String Component ",description);
+        String componentString= "\t\t\t<component>\n"+
+                "\t\t\t\t\t<string>"+description+"</string>\n"+
+                "\t\t\t</component>\n";
+        return componentString;
     }
 }

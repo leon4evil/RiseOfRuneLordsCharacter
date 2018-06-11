@@ -64,10 +64,9 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_view_item, parent, false);
-
-
         }
-        Feat feat = getItem(position);
+
+        final Feat feat = getItem(position);
         final FlexboxLayout maFlexboxLayout = listItemView.findViewById(R.id.flexboxlayout);
 
         //I guess this is where we're adding default text view to listItemView
@@ -118,6 +117,9 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
                         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                             if(isChecked ){
                                 checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), true);
+                                remove(feat);
+                                //notifyDataSetChanged();
+                                checkboxIsCheckedlist.remove(position);
                             }else{
                                 checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), false);
                             }

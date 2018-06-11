@@ -31,10 +31,7 @@ public abstract class Feat implements Parcelable {
     }
 
 
-    public void printFeat(){
-        Log.d("type of Feat","Ima generic feat");
-
-    }
+    public abstract String printFeat();
 
     /////////////////Parceling part/////////////////////////
 

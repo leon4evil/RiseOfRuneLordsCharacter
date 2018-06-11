@@ -2,25 +2,24 @@ package riseofrunelordscharacter.leon4evil.com.riseofrunelordscharacter;
 
 
 import android.content.Context;
-import android.os.Environment;
 import android.util.Log;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.nio.file.Files;
 import java.util.List;
 
 public class CharacterSaver {
+    private GameCharacter workingCharacter;
     private String workingName;
     private List<Feat> workingFeats;
     private List<Feat> workingCompontnens;
     private Context maContext;
 
-    public CharacterSaver(gameCharacter givencharacter, Context givenContext){
+    public CharacterSaver(GameCharacter givencharacter, Context givenContext){
+
+        workingCharacter = givencharacter;
         workingName = givencharacter.getCharacterName();
         workingFeats = givencharacter.getCharacterFeats();
         maContext = givenContext;
@@ -40,7 +39,7 @@ public class CharacterSaver {
                 //Files.createDirectory(dir.toPath()); used this to debug but requires API 26 or higher
                 dir.mkdirs();
             }
-            File newFile = new File(dir, "mofofile.xml");
+            File newFile = new File(dir, workingName+".xml");
             if(newFile.exists()) {//check if file already exits
                 Log.d("Does File Exist?","File Already Exists!");
             }
@@ -54,20 +53,18 @@ public class CharacterSaver {
                 }
             }
 
+            //TODO instead of appending to file create a different file per character
             FileOutputStream maFileOutputStream = new FileOutputStream(newFile,true);
             Log.d("Where is ma Directory? " ,String.valueOf(maContext.getFilesDir()));
-            String content = "My ass\n";
+            String content = workingCharacter.printGameCharacter ();
 
             maFileOutputStream.write(content.getBytes());
-            Log.d("Saving to file","my ass");
+            Log.d("Saving to file","ass");
             maFileOutputStream.close();
 
             //OutputStreamWriter maWriter = new OutputStreamWriter(maContext.openFileOutput("savedCharacter.xml",Context.MODE_APPEND));
             //OutputStreamWriter maWriter = new OutputStreamWriter(maFileOutputStream);
-
             //maWriter.write("My ass");
-
-
             //maWriter.close();
 
         }

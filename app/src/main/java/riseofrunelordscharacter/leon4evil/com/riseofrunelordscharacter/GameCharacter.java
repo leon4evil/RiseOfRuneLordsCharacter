@@ -12,14 +12,14 @@ import java.util.List;
  * Created by leon on 4/3/18.
  */
 
-public class gameCharacter implements Parcelable {
+public class GameCharacter implements Parcelable {
 
     private String characterName;
     private String characterClass;
     private ArrayList<Feat> characterFeats = new ArrayList<Feat>();
 
     //constructor
-    public gameCharacter(String givenCharacterName, String givenCharacterClass) {
+    public GameCharacter(String givenCharacterName, String givenCharacterClass) {
         characterName = givenCharacterName;
         characterClass = givenCharacterClass;
     }
@@ -126,6 +126,17 @@ public class gameCharacter implements Parcelable {
         }
     }
 
+    public String printGameCharacter(){
+        //Log.d("Ma Name Is ", name); instead of the log we'll show this in a text field
+        String characterString = "<character>\n"+
+                "\t\t<name>" +characterName+ "</name>\n";
+        for (Feat item:characterFeats){
+            characterString = characterString + item.printFeat();
+        }
+        characterString = characterString+"</character>\n";
+        return characterString;
+    }
+
     /////////////////Parceling part/////////////////////////
 
     //Writing
@@ -138,7 +149,7 @@ public class gameCharacter implements Parcelable {
     }
 
     //Reading
-    public gameCharacter(Parcel in){
+    public GameCharacter(Parcel in){
         characterName = in.readString();
         characterClass = in.readString();
         in.readList(characterFeats,Feat.class.getClassLoader());
@@ -152,12 +163,12 @@ public class gameCharacter implements Parcelable {
     }
 
     public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {
-        public gameCharacter createFromParcel(Parcel in) {
-            return new gameCharacter(in);
+        public GameCharacter createFromParcel(Parcel in) {
+            return new GameCharacter(in);
         }
 
-        public gameCharacter[] newArray(int size) {
-            return new gameCharacter[size];
+        public GameCharacter[] newArray(int size) {
+            return new GameCharacter[size];
         }
     };
 

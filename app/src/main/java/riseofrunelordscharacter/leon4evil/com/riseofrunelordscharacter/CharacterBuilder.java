@@ -8,6 +8,8 @@ import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,10 +22,11 @@ public class CharacterBuilder {
     private InputStream maStream;
     private InputStreamReader maReader;
     private Context maContext;
+    private File maCurrentFile;
 
-
+    //this constructor takes only a file name but wont do anything if the actual file is not in assets
     public CharacterBuilder(String XMLFilename,Context givenContext) { //this will build a character from an XML File
-        try {
+        try {                                                       //in the assets foulder
             AssetManager assetmngr = givenContext.getAssets();
             maStream = assetmngr.open(XMLFilename);//*this.openFileInput("sajan.xml");*/
             if (maStream != null) {
@@ -35,18 +38,32 @@ public class CharacterBuilder {
             Log.d("Main Activity", "Cannot read File");
         }
     }
+    //contructor that is given a file
+    public CharacterBuilder(File givenfile,Context givenContext ){
 
-    private List<gameCharacter> readXMLfile() {
+        maCurrentFile = givenfile;
+        try {
+            maStream = new FileInputStream(maCurrentFile);
+            if (maStream != null) {
+                maReader = new InputStreamReader(maStream);
+            }
+
+        }catch (FileNotFoundException e){
+            Log.d("Main Activity", "File not found");
+        }
+    }
+
+    private List<GameCharacter> readXMLfile() {
 
         String lastTag="";
         String currentString;
 
-        gameCharacter currentGameCharacter = new gameCharacter("","");
+        GameCharacter currentGameCharacter = new GameCharacter("","");
         Feat  currentFeat = new Skill("",0,0);
         IComponent currentComponent = new CheckboxComponent();// = new FeatComponent("");
 
 
-        List<gameCharacter> currentGameCharacterList = new ArrayList<gameCharacter>();
+        List<GameCharacter> currentGameCharacterList = new ArrayList<GameCharacter>();
         List<IComponent> currentFeatComponentList = new ArrayList<IComponent>();
         List<Feat> currentFeatList = new ArrayList<Feat>();
 
@@ -65,7 +82,7 @@ public class CharacterBuilder {
                 } else if (eventType == XmlPullParser.START_TAG) {//start tag cases we create
                     lastTag = xpp.getName();                      //what we find
                     if(lastTag.equals( "name")){
-                        currentGameCharacter = new gameCharacter("","");
+                        currentGameCharacter = new GameCharacter("","");
                     }
                     if (lastTag.equals("skillname")){
                         currentFeat = new Skill("",0,0);
@@ -161,8 +178,8 @@ public class CharacterBuilder {
 
         return currentGameCharacterList;
     }
-    public List<gameCharacter> getCharacters(){
-        List<gameCharacter> characterList;
+    public List<GameCharacter> getCharacters(){
+        List<GameCharacter> characterList;
         characterList = readXMLfile();
 
         return characterList;
