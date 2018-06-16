@@ -27,7 +27,10 @@ public class CharacterSaver {
 
     public void saveToFile() {
         try {
+            //for when file already exist
+            int numberOfRepeatedFiles = 2;
             //File sdCard = Environment.getExternalStorageDirectory(); //get location of external storage
+            //Not Really sd card. Internal accessible storage in device
             File sdCard = maContext.getExternalFilesDir(null);
             //may have to change this to internal
             File dir = new File(sdCard.getAbsolutePath()+"/thismofoapp");
@@ -39,22 +42,35 @@ public class CharacterSaver {
                 //Files.createDirectory(dir.toPath()); used this to debug but requires API 26 or higher
                 dir.mkdirs();
             }
+
             File newFile = new File(dir, workingName+".xml");
-            if(newFile.exists()) {//check if file already exits
-                Log.d("Does File Exist?","File Already Exists!");
+            File repeatednewFile;
+
+            //see if file already exists. if it does create a different one
+            while(newFile.exists()) {//TODO make checking for files more efficient.
+                                    //using garbage collector too much
+                                    //TODO limit how many files can be created
+                                    //this app could fill up entire device
+
+                Log.d("Does File Exist?", "File Already Exists!");
+
+                repeatednewFile = new File(dir, workingName + String.valueOf(numberOfRepeatedFiles) + ".xml");
+                //newFile.renameTo(repeatednewFile);
+                newFile = repeatednewFile;
+                numberOfRepeatedFiles++;
+
             }
-            else{
                 Log.d("Does File Exist?","Does not. Creating now");
                 try{
+                    Log.d("creating file",newFile.getName());
                     newFile.createNewFile();
                 }
                 catch (IOException e){
                     e.printStackTrace();
                 }
-            }
 
-            //TODO instead of appending to file create a different file per character
-            FileOutputStream maFileOutputStream = new FileOutputStream(newFile,true);
+            //write out file
+            FileOutputStream maFileOutputStream = new FileOutputStream(newFile);
             Log.d("Where is ma Directory? " ,String.valueOf(maContext.getFilesDir()));
             String content = workingCharacter.printGameCharacter ();
 
@@ -69,7 +85,7 @@ public class CharacterSaver {
 
         }
         catch (FileNotFoundException e){
-            Log.d("Could not find File! ","HAHAHAHAHA");
+            Log.d("Could not find File! ","NOOOOOOOOOOO!");
             e.printStackTrace();
         } catch (IOException e) {
             Log.d("CANNOT WRITE","NOOOOOOOOOOOOO!");

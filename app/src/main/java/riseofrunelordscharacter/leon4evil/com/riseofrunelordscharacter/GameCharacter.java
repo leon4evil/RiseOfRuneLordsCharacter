@@ -101,11 +101,14 @@ public class GameCharacter implements Parcelable {
 
             //and when we find a different type of object
             //add an extra separator
+            //TODO fix issue that makes app crash when there is no powers
             String[] seconddiviedupString;
             Feat aSeparator;
             int currentfeatlistsize = characterFeats.size();
             int mostrecentseparator = 1;
-            for (int x = 2; currentfeatlistsize >= x; x++) {
+            for (int x = 2; currentfeatlistsize > x; x++) {
+                Log.d("THE FUCK",characterFeats.get(mostrecentseparator).getClass().toString());
+
                 if (characterFeats.get(mostrecentseparator).getClass() != characterFeats.get(x).getClass()) {
                     seconddiviedupString = characterFeats.get(x).getClass().toString().split("[.]");
                     aSeparator = new Separator(seconddiviedupString[seconddiviedupString.length - 1]);
@@ -113,9 +116,7 @@ public class GameCharacter implements Parcelable {
                     mostrecentseparator = x + 1;
                     x++;
                 }
-
             }
-
         }
     }
     private void removeSeparators(){
