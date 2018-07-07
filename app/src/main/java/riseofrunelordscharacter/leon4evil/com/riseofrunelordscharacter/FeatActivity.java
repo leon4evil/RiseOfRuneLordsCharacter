@@ -8,14 +8,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class FeatActivity extends AppCompatActivity {
-
+    GameCharacter maCharacter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feat);
 
         Bundle data = getIntent().getExtras();
-        final GameCharacter maCharacter = getIntent().getParcelableExtra("clickedCharacter");
+        maCharacter = getIntent().getParcelableExtra("clickedCharacter");
         Log.d("character name",maCharacter.getCharacterName());
 
         //Always order feats before handing to adapter(orders and adds separators)

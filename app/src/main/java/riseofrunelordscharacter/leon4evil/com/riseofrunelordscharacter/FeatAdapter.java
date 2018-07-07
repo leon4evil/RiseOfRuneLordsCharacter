@@ -117,9 +117,8 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
                         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                             if(isChecked ){
                                 checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), true);
-                                remove(feat);
-                                //notifyDataSetChanged();
-                                checkboxIsCheckedlist.remove(position);
+                                //remove(feat); //dont need this just a test
+
                             }else{
                                 checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), false);
                             }

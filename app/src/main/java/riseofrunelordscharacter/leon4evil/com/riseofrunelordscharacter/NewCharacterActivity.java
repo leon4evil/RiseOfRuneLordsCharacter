@@ -1,11 +1,13 @@
 package riseofrunelordscharacter.leon4evil.com.riseofrunelordscharacter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -39,6 +41,13 @@ public class NewCharacterActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 CharacterSaver maSaver = new CharacterSaver(currentCharacters.get(i),thisActivityContext);
                 maSaver.saveToFile();
+
+
+                Toast toast = Toast.makeText(getApplicationContext(), "New "+currentCharacters.get(i).getCharacterName()+" created.", Toast.LENGTH_SHORT);
+                toast.show();
+
+                Intent MainActivityIntent = new Intent(NewCharacterActivity.this,MainActivity.class);
+                startActivity(MainActivityIntent);
             }
         });
     }
