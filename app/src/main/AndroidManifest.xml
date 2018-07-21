@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".FeatActivity"
-            android:label="Character Feats"/>
+                    android:label="Character Feats"/>
         <activity android:name=".NewCharacterActivity"
             android:label="Select New Character">
 

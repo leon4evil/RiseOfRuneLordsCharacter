@@ -17,6 +17,7 @@ public class GameCharacter implements Parcelable {
     private String characterName;
     private String characterClass;
     private ArrayList<Feat> characterFeats = new ArrayList<Feat>();
+    private boolean selected=false;
 
     //constructor
     public GameCharacter(String givenCharacterName, String givenCharacterClass) {
@@ -34,6 +35,7 @@ public class GameCharacter implements Parcelable {
     public ArrayList<Feat> getCharacterFeats() {
         return characterFeats;
     }
+    public boolean isSelected() { return selected; }
 
     //setters
     public void setCharacterName(String characterName) {
@@ -42,6 +44,7 @@ public class GameCharacter implements Parcelable {
     public void setCharacterClass(String characterClass) {
         this.characterClass = characterClass;
     }
+    public void setSelected(boolean selected){ this.selected = selected; }
 
     //other methods
     public void addFeat(Feat givenFeat) {
@@ -147,6 +150,13 @@ public class GameCharacter implements Parcelable {
         out.writeString(characterClass);
        //out.writeTypedList(characterFeats);
         out.writeList(characterFeats);
+        if(!selected){
+            out.writeInt(0);
+        }
+        else {
+            out.writeInt(1);
+        }
+
     }
 
     //Reading
@@ -154,6 +164,13 @@ public class GameCharacter implements Parcelable {
         characterName = in.readString();
         characterClass = in.readString();
         in.readList(characterFeats,Feat.class.getClassLoader());
+        int numba = in.readInt();
+        if(numba==0){
+            this.selected = false;
+        }
+        else{
+            this.selected = true;
+        }
 
     }
 

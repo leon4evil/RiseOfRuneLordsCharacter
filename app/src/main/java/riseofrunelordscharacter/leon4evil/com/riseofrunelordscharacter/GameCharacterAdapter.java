@@ -1,8 +1,10 @@
 package riseofrunelordscharacter.leon4evil.com.riseofrunelordscharacter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +19,12 @@ import java.util.ArrayList;
 
 public class GameCharacterAdapter extends ArrayAdapter<GameCharacter> {
 
-    public GameCharacterAdapter(Context context , ArrayList<GameCharacter> gameCharacters){ //subclass constructor
-        super(context,0,gameCharacters);}
+    boolean selectionmode;
+
+    public GameCharacterAdapter(Context context , ArrayList<GameCharacter> gameCharacters,boolean currentmode){ //subclass constructor
+        super(context,0,gameCharacters);
+        selectionmode = currentmode;
+    }
 
     @NonNull
     @Override
@@ -40,8 +46,34 @@ public class GameCharacterAdapter extends ArrayAdapter<GameCharacter> {
         TextView characterTextview = (TextView) listItemView.findViewById(R.id.nameTextView);
         characterTextview.setText(maGameCharacter.getCharacterName());
 
+        GameCharacter thisCharacter = (GameCharacter)getItem(position);
+        if(thisCharacter.isSelected()){
+            if(selectionmode) {
+                Log.d("turning","blue");
+                listItemView.setBackgroundColor(Color.parseColor("#33007FFF"));
+            }
+        }
+        else{
+            if(selectionmode){
+                Log.d("turning","white");
+                listItemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            }
+        }
+        listItemView.setFocusable(false);
+        listItemView.setClickable(false);
+
         return listItemView;
 
+    }
+
+    public void updateColor(){
+
+
+
+    }
+
+    public void updatemode(boolean givenselectionmode){
+        this.selectionmode = givenselectionmode;
     }
 
 }

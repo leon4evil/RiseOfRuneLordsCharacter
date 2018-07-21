@@ -185,9 +185,3 @@ public class CharacterBuilder {
         return characterList;
     }
 }
-
-
-
-
-
-

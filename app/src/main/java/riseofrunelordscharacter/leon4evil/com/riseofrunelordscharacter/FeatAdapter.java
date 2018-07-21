@@ -1,6 +1,8 @@
 package riseofrunelordscharacter.leon4evil.com.riseofrunelordscharacter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -31,10 +33,12 @@ import java.util.Arrays;
 public class FeatAdapter extends ArrayAdapter<Feat> {
 
     private ArrayList <ArrayList <Boolean>> checkboxIsCheckedlist = new ArrayList<ArrayList<Boolean>>();
-
+    GameCharacter workingcharacter;
+    //ArrayList<Feat> working
     //private int backgroundColor;
-    public FeatAdapter(Context context , ArrayList<Feat> feats){ //subclass constructor
+    public FeatAdapter(Context context , ArrayList<Feat> feats, GameCharacter givenCharacter){ //subclass constructor
         super(context,0,feats);
+        workingcharacter= givenCharacter;
 
         for(int i =0;i<feats.size();i++){
             checkboxIsCheckedlist.add(new ArrayList<Boolean>());
@@ -117,10 +121,21 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
                         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                             if(isChecked ){
                                 checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), true);
+                                CheckboxComponent thischeckbox = (CheckboxComponent) feat.getComponents().get(maFlexboxLayout.indexOfChild(buttonView));
+                                thischeckbox.setChecked(true);
+                                //this tested see if we could change data on fly
+                                //feat.getComponents().get(maFlexboxLayout.indexOfChild(buttonView)).setDescription("ASSSSSSS");
+                                //workingcharacter.setCharacterName("ASSSS");
+                                //notifyDataSetChanged();
+                                //((Activity)getContext()).finish();
+
+
                                 //remove(feat); //dont need this just a test
 
                             }else{
                                 checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), false);
+                                CheckboxComponent thischeckbox = (CheckboxComponent) feat.getComponents().get(maFlexboxLayout.indexOfChild(buttonView));
+                                thischeckbox.setChecked(false);
                             }
                         }
                     });
