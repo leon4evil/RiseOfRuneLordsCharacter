@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    @Override
+    @Override //make menu show
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_main,menu);
         this.menu=menu;
@@ -184,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //if user hits back key
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event)  {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {

@@ -121,6 +121,7 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
                         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                             if(isChecked ){
                                 checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), true);
+                                //this actually changes data the adapter is working with
                                 CheckboxComponent thischeckbox = (CheckboxComponent) feat.getComponents().get(maFlexboxLayout.indexOfChild(buttonView));
                                 thischeckbox.setChecked(true);
                                 //this tested see if we could change data on fly
@@ -134,6 +135,7 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
 
                             }else{
                                 checkboxIsCheckedlist.get(position).set(maFlexboxLayout.indexOfChild(buttonView), false);
+                                //this actually changes data the adapter is working with
                                 CheckboxComponent thischeckbox = (CheckboxComponent) feat.getComponents().get(maFlexboxLayout.indexOfChild(buttonView));
                                 thischeckbox.setChecked(false);
                             }
