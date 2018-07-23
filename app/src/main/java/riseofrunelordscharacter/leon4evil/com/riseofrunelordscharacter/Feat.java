@@ -13,6 +13,8 @@ public abstract class Feat implements Parcelable {
     //kdfn;sdkfn
     //fasdfas
     //asdfsf
+    //asdasdasdasdasd
+    //asdasdasdas
 
     //variables
     protected String name;
