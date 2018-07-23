@@ -10,6 +10,9 @@ import java.util.List;
  */
 
 public abstract class Feat implements Parcelable {
+    //kdfn;sdkfn
+    //fasdfas
+    //asdfsf
 
     //variables
     protected String name;
