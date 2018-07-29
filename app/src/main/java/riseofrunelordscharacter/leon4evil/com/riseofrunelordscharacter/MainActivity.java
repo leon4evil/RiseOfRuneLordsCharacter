@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         //Getting toolbar interface going
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -96,11 +95,11 @@ public class MainActivity extends AppCompatActivity {
                     if (clickedCharacter.getCharacterName().equals("New Character")) {
                         Intent newCharacterIntent = new Intent(MainActivity.this, NewCharacterActivity.class);
                         startActivity(newCharacterIntent);
+                        finish();
 
 
                     } else {
                         Intent featIntent = new Intent(MainActivity.this, FeatActivity.class);
-
                         clickedCharacter.printFeats();
                         //Log.d("wanna see clckied", clickedCharacter.printFeats());
                         featIntent.putExtra("clickedCharacter", clickedCharacter);
@@ -162,11 +161,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.item2:
-                Toast.makeText(getApplicationContext(),"Select all",Toast.LENGTH_SHORT).show();
-                setTitle("Select");
 
-                if(currentCharacters.size()>1) {
-                selectionmode = true;
+                if(currentCharacters.size()>1){
+                    Toast.makeText(getApplicationContext(),"Select all",Toast.LENGTH_SHORT).show();
+                    setTitle("Select");
+                    selectionmode = true;
                 for ( int i=0; i+1 < currentCharacters.size(); i++) {
                     currentCharacters.get(i).setSelected(true);
                 }
