@@ -23,6 +23,7 @@ public abstract class Feat implements Parcelable {
     public abstract String getLabel();
     public abstract List<IComponent> getComponents();
     public abstract void addComponents(List<IComponent> componentList);
+    public abstract void addComponent(IComponent sumComponent, int index);
     public abstract void setName(String givenName);
 
     //Other method

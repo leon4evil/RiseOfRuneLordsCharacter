@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<character>
+	<name>Seoni</name>
+	<class>Sorcerer</class>
+
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+			<component>
+				<string>d4</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d8</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Intelligence</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+			<component>
+				<string>d12</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>diplomacy: charisma +2</string>
+			</component>
+			<component>
+				<string>arcane: charisma +2</string>
+			</component>
+
+		</skill>
+	</feat>
+
+
+
+
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+			<component>
+				<string>6</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>7</description>
+				</checkbox>
+			</component>
+
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>For your combat check, you may discard a card to roll your Arcane die + 1d6(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>)(</string>
+			</component>
+
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>)with the fire(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>or Acid</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>)trait and the attack and Magic traits. This counts as playing a spell.</string>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>You automatically succeed at your check to recharge a spell (</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>or item</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>) with the Arcane trait.</string>
+			</component>
+
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>Reduce Fire</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>and Acid and Cold</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>) damage dealt to you by 1 (</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>).</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+				<description></description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>When you play Blessing or Pharasma, add d12 intead of the normal die.</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+				<description></description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>At the start of your turn, you may banish an ally to draw 3 cards.</string>
+			</component>
+		</power>
+	</feat>
+
+</character>

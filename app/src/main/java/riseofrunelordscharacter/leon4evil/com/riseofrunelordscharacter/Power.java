@@ -84,6 +84,11 @@ public class Power extends Feat {
         return featString;
     }
 
+    @Override
+    public void addComponent(IComponent sumComponent, int index){
+        powerComponents.add(index,sumComponent);
+    }
+
 
     /////////////////Parceling part/////////////////////////
 

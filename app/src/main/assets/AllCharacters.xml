@@ -1,1389 +1,1852 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AllCharacters>
-	<character>
-		<name>Sajan</name>
-		<class>Monk</class>
+<character>
+	<name>Sajan</name>
+	<class>Monk</class>
 
-		<feat>
-			<skill>
-				<skillname>Strength</skillname>
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
 
-				<component>
-					<string>d6</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-			</skill>
-		</feat>
-
-
-		<feat>
-			<skill>
-				<skillname>Dexterity</skillname>
-				<component>
-					<string>d10</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+4</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<string>acrobatics: dexterity+2 </string>
-				</component>
-			</skill>
-		</feat>
-
-		<feat>
-			<skill>
-				<skillname>Constitution</skillname>
-
-				<component>
-					<string>d6</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notcheckec</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<string>fortitude: constitution+2 </string>
-				</component>
-
-			</skill>
-		</feat>
-
-		<feat>
-			<skill>
-				<skillname>Inteligence</skillname>
-
-				<component>
-					<string>d6</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-			</skill>
-		</feat>
-
-
-		<feat>
-			<skill>
-				<skillname>Wisdom</skillname>
-
-				<component>
-					<string>d8</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-
-			</skill>
-		</feat>
-
-		<feat>
-			<skill>
-				<skillname>Charisma</skillname>
-
-				<component>
-					<string>d6</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-			</skill>
-		</feat>
-
-
-		<feat>
-			<power>
-				<powername>Hand Size</powername>
-
-				<component>
-					<string>4</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>5</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>6</description>
-					</checkbox>
-				</component>
-
-			</power>
-		</feat>
-
-		<feat>
-			<power>
-				<powername></powername>
-
-				<component>
-					<string>For your combat check, you may your dexterity die(</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description></description>
-					</checkbox>
-				</component>
-				<component><string>and add the magic trait) (</string></component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description></description>
-					</checkbox>
-				</component>
-
-				<component>
-					<string>and the fire trait); you may not play a weapon on the check.</string>
-				</component>
-
-			</power>
-		</feat>
-
-		<feat>
-			<power>
-				<powername></powername>
-
-				<component>
-					<string>You may play any number of blessings on your combat check; recharge them instead of descarding them.</string>
-				</component>
-
-			</power>
-		</feat>
-	</character>
-
-	<character>
-		<name>Valeros</name>
-		<class>Fighter</class>
-
-		<feat>
-			<skill>
-				<skillname>Strength</skillname>
-
-				<component>
-					<string>d10</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+4</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<string>melee: strength+3</string>
-				</component>
-
-			</skill>
-		</feat>
-
-		<feat>
-			<skill>
-				<skillname>Dexterity</skillname>
-				<component>
-					<string>d8</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-			</skill>
-		</feat>
-
-		<feat>
-			<skill>
-				<skillname>Constitution</skillname>
-
-				<component>
-					<string>d8</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notcheckec</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<string>fortitude: constitution+2 </string>
-				</component>
-
-			</skill>
-		</feat>
-
-		<feat>
-			<skill>
-				<skillname>Inteligence</skillname>
-
-				<component>
-					<string>d6</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-			</skill>
-		</feat>
-
-		<feat>
-			<skill>
-				<skillname>Wisdom</skillname>
-
-				<component>
-					<string>d4</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-			</skill>
-		</feat>
-
-		<feat>
-			<skill>
-				<skillname>Charisma</skillname>
-
-				<component>
-					<string>d6</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<string>diplomacy: charisma +2</string>
-				</component>
-
-			</skill>
-		</feat>
-
-		<feat>
-			<power>
-				<powername>Hand Size</powername>
-
-				<component>
-					<string>4</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>5</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>6</description>
-					</checkbox>
-				</component>
-
-			</power>
-		</feat>
-
-		<feat>
-			<power>
-				<powername>Proficient With</powername>
-
-				<component>
-					<checkbox>
-						<ischecked>checked</ischecked>
-						<description>light Armours</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>checked</ischecked>
-						<description>Heavy Armours</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>checked</ischecked>
-						<description>Weapons</description>
-					</checkbox>
-				</component>
-
-			</power>
-		</feat>
-
-		<feat>
-			<power>
-				<powername></powername>
-
-				<component>
-					<string>Add 1d4 (</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<string>)(</string>
-				</component>
-
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<string>) to anothers character's combat check at your location.</string>
-				</component>
-
-				<component>
-					<string>When you play a weapon, you may recharge it instead of discarding it.</string>
-				</component>
-			</power>
-		</feat>
-	</character>
-	<character>
-		<name>Seoni</name>
-		<class>Sorcerer</class>
-		<feat>
-			<skill>
-				<skillname>Strength</skillname>
-				<component>
-					<string>d4</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Dexterity</skillname>
-				<component>
-					<string>d8</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Constitution</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Intelligence</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Wisdom</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Charisma</skillname>
-				<component>
-					<string>d12</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+4</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>diplomacy: charisma +2</string>
-				</component>
-				<component>
-					<string>arcane: charisma +2</string>
-				</component>
-
-			</skill>
-		</feat>
-		<feat>
-			<power>
-				<powername>Hand Size</powername>
-				<component>
-					<string>6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>7</description>
-					</checkbox>
-				</component>
-
-			</power>
-
-		</feat>
-		<feat>
-			<power>
-				<powername></powername>
-				<component>
-					<string>For your combat check, you may discard a card to roll your Arcane die + 1d6 (</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>)(</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-
-				<component>
-					<string>) with the Attack, Fire, and Magic traits. This counts as playing a spell.</string>
-				</component>
-			</power>
-		</feat>
-		<feat>
-			<powername></powername>
 			<component>
-				<string>You automatically succeed at your check to recharge a spell(</string>
+				<string>d6</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+
+
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d10</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>acrobatics: dexterity+2 </string>
+			</component>
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+
+			<component>
+				<string>d6</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notcheckec</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>fortitude: constitution+2 </string>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Inteligence</skillname>
+
+			<component>
+				<string>d6</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+
+
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+
+			<component>
+				<string>d8</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+
+			<component>
+				<string>d6</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+
+
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+
+			<component>
+				<string>4</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>5</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>6</description>
+				</checkbox>
+			</component>
+
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+
+			<component>
+				<string>For your combat check, you may your dexterity die(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
+			</component>
+			<component><string>and add the magic trait) (</string></component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>and the fire trait); you may not play a weapon on the check.</string>
+			</component>
+
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+
+			<component>
+				<string>You may play any number of blessings on your combat check; recharge them instead of descarding them.</string>
+			</component>
+
+		</power>
+	</feat>
+</character>
+
+<character>
+	<name>Valeros</name>
+	<class>Fighter</class>
+
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+
+			<component>
+				<string>d10</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>melee: strength+3</string>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d8</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+
+			<component>
+				<string>d8</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notcheckec</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>fortitude: constitution+2 </string>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Inteligence</skillname>
+
+			<component>
+				<string>d6</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+
+			<component>
+				<string>d4</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+
+			<component>
+				<string>d6</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>	diplomacy: charisma+2</string>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+
+			<component>
+				<string>4</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>5</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>6</description>
+				</checkbox>
+			</component>
+
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername>Proficient With</powername>
+
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>light Armours</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>Heavy Armours</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>Weapons</description>
+				</checkbox>
+			</component>
+
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+
+			<component>
+				<string>Add 1d4 (</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>) to anothers character's combat check at your location.</string>
+			</component>
+
+			<component>
+				<string>When you play a weapon, you may recharge it instead of discarding it.</string>
+			</component>
+		</power>
+	</feat>
+</character>
+<character>
+	<name>Seoni</name>
+	<class>Sorcerer</class>
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+			<component>
+				<string>d4</string>
 			</component>
 			<component>
 				<checkbox>
 					<ischecked>notchecked</ischecked>
-					<description>or item</description>
+					<description>+1</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d8</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
 				</checkbox>
 			</component>
 			<component>
-				<string>) with the Arcane trait.</string>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Intelligence</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
 			</component>
 
-		</feat>
-	</character>
-	<character>
-		<name>Ezren</name>
-		<class>Wizard</class>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+			<component>
+				<string>d12</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>diplomacy: charisma +2</string>
+			</component>
+			<component>
+				<string>arcane: charisma +2</string>
+			</component>
 
-		<feat>
-			<skill>
-				<skillname>Strength</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Dexterity</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Constitution</skillname>
-				<component>
-					<string>d4</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Intelligence</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+4</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>arcane: intelligence +2</string>
-				</component>
-				<component>
-					<string>knowledge: intelligence +2</string>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Wisdom</skillname>
-				<component>
-					<string>d8</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
+		</skill>
+	</feat>
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+			<component>
+				<string>6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>7</description>
+				</checkbox>
+			</component>
 
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Charisma</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
+		</power>
 
-			</skill>
-		</feat>
-		<feat>
-			<power>
-				<powername>Hand Size</powername>
-				<component>
-					<string>6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>7</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>8</description>
-					</checkbox>
-				</component>
-			</power>
-		</feat>
-		<feat>
-			<power>
-				<powername></powername>
-				<component>
-					<string>After you play a spell with the Arcane trait, you may examine the top card of your deck; if it's a spell, you may put it in your hand.</string>
-				</component>
-			</power>
-		</feat>
-		<feat>
-			<power>
-				<powername></powername>
-				<component>
-					<string>If you acquire a card with the magic trait during an exploration, you may immediately explore again.</string>
-				</component>
-			</power>
-		</feat>
-		<feat>
-			<power>
-				<powername></powername>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>add 1</description>
-					</checkbox>
-				</component>
-				<component><string>(</string></component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>2</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>) to your check to recharge a card.</string>
-				</component>
-			</power>
-		</feat>
-	</character>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>For your combat check, you may discard a card to roll your Arcane die + 1d6 (</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>)(</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
 
-	<character>
-		<name>Kyra</name>
-		<class>Cleric of Sarenrae</class>
-		<feat>
-			<skill>
-				<skillname>Strength</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+4</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>melee: strength +2</string>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Dexterity</skillname>
-				<component>
-					<string>d4</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Constitution</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>fortitude: constitution +3</string>
-				</component>
+			<component>
+				<string>) with the Attack, Fire, and Magic traits. This counts as playing a spell.</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<powername></powername>
+		<component>
+			<string>You automatically succeed at your check to recharge a spell(</string>
+		</component>
+		<component>
+			<checkbox>
+				<ischecked>notchecked</ischecked>
+				<description>or item</description>
+			</checkbox>
+		</component>
+		<component>
+			<string>) with the Arcane trait.</string>
+		</component>
 
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Intelligence</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
+	</feat>
+</character>
+<character>
+	<name>Ezren</name>
+	<class>Wizard</class>
 
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Wisdom</skillname>
-				<component>
-					<string>d12</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+4</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>divine: wisdom +2</string>
-				</component>
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+			<component>
+				<string>d4</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Intelligence</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>arcane: intelligence +2</string>
+			</component>
+			<component>
+				<string>knowledge: intelligence +2</string>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+			<component>
+				<string>d8</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
 
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Charisma</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<power>
-				<powername>Hand Size</powername>
-				<component>
-					<string>5</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>6</description>
-					</checkbox>
-				</component>
-			</power>
-		</feat>
-		<feat>
-			<power>
-				<powername>Proficient With</powername>
-				<component>
-					<checkbox>
-						<ischecked>checked</ischecked>
-						<description>Light Armors</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>checked</ischecked>
-						<description>Heavy Armors</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>checked</checkbox>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+			<component>
+				<string>6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>7</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>8</description>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>After you play a spell with the Arcane trait, you may examine the top card of your deck; if it's a spell, you may put it in your hand.</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>If you acquire a card with the magic trait during an exploration, you may immediately explore again.</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>add 1</description>
+				</checkbox>
+			</component>
+			<component><string>(</string></component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>2</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>) to your check to recharge a card.</string>
+			</component>
+		</power>
+	</feat>
+</character>
+
+<character>
+	<name>Kyra</name>
+	<class>Cleric of Sarenrae</class>
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>melee: strength +2</string>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d4</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>fortitude: constitution +3</string>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Intelligence</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+			<component>
+				<string>d12</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>divine: wisdom +2</string>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+			<component>
+				<string>5</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>6</description>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername>Proficient With</powername>
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>Light Armors</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>Heavy Armors</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>checked</checkbox>
+				<description>Weapons</description>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>Instead of your first exploration on a turn, you may reveal a card with the Divine trait to choose a character at your location. Shuffle 1d4+1(</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>) random cards from his discard pile into his deck, then discard the card you revealed.</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>Add 1d8 (</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>) with the Magic trait to your check to defeat abane with the Undead trait.</string>
+			</component>
+		</power>
+	</feat>
+</character>
+
+<character>
+	<name>Harsk</name>
+	<class>Ranger</class>
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d8</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>ranged: dexterity +3</string>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+			<component>
+				<string>d12</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>fortitude: constitution +2</string>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Intelligence</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>perception: wisdom +2</string>
+			</component>
+			<component>
+				<string>survival: wisdom +2</string>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+			<component>
+				<string>d4</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+			<component>
+				<string>5</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>6</description>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername>Proficient With</powername>
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>Light Armors</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
 					<description>Weapons</description>
-				</component>
-			</power>
-		</feat>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
 
-		<feat>
-			<power>
-				<powername></powername>
-				<component>
-					<string>Instead of your first exploration on a turn, you may reveal a card with the Divine trait to choose a character at your location. Shuffle 1d4+1(</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>) random cards from his discard pile into his deck, then discard the card you revealed.</string>
-				</component>
-			</power>
-		</feat>
-		<feat>
-			<power>
-				<powername></powername>
-				<component>
-					<string>Add 1d8 (</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>) with the Magic trait to your check to defeat abane with the Undead trait.</string>
-				</component>
-			</power>
-		</feat>
-	</character>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>At the end of your turn, you may examine the top card (</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>or bottom card</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>)of your location Deck.</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>you may recharge a card to add 1d4(</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>) (</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>) to a combat check at another location.</string>
+			</component>
+		</power>
+	</feat>
+</character>
+<character>
+	<name>Lem</name>
+	<class>Bard</class>
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+			<component>
+				<string>d4</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d8</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
 
-	<character>
-		<name>Harsk</name>
-		<class>Ranger</class>
-		<feat>
-			<skill>
-				<skillname>Strength</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Dexterity</skillname>
-				<component>
-					<string>d8</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+4</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>ranged: dexterity +3</string>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Constitution</skillname>
-				<component>
-					<string>d12</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>fortitude: constitution +2</string>
-				</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Intelligence</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
 
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Intelligence</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Wisdom</skillname>
-				<component>
-					<string>d6</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+3</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>perception: wisdom +2</string>
-				</component>
-				<component>
-					<string>survival: wisdom +2</string>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<skill>
-				<skillname>Charisma</skillname>
-				<component>
-					<string>d4</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-			</skill>
-		</feat>
-		<feat>
-			<power>
-				<powername>Hand Size</powername>
-				<component>
-					<string>5</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>6</description>
-					</checkbox>
-				</component>
-			</power>
-		</feat>
-		<feat>
-			<power>
-				<powername>Proficient With</powername>
-				<component>
-					<checkbox>
-						<ischecked>checked</ischecked>
-						<description>Light Armors</description>
-					</checkbox>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>checked</ischecked>
-						<description>Weapons</description>
-					</checkbox>
-				</component>
-			</power>
-		</feat>
+			<component>
+				<string>knowledge:inteligence +3</string>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
 
-		<feat>
-			<power>
-				<powername></powername>
-				<component>
-					<string>At the end of your turn, you may examine the top card (</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>or bottom card</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>)of your location Deck.</string>
-				</component>
-			</power>
-		</feat>
-		<feat>
-			<power>
-				<powername></powername>
-				<component>
-					<string>you may recharge a card to add 1d4(</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+1</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>) (</string>
-				</component>
-				<component>
-					<checkbox>
-						<ischecked>notchecked</ischecked>
-						<description>+2</description>
-					</checkbox>
-				</component>
-				<component>
-					<string>) to a combat check at another location.</string>
-				</component>
-			</power>
-		</feat>
-	</character>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+			<component>
+				<string>d10</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+
+
+			<component>
+				<string>arcane:charisma +1</string>
+			</component>
+
+			<component>
+				<string>diplomacy:charisma +3</string>
+			</component>
+			<component>
+				<string>divine:charisma +1</string>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+			<component>
+				<string>6</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername>Proficient With</powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>Light Armors</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>Weapons</description>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>Once per check, you may recharge a card to add 1d4 (</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>) to a check attempted by another character at your location.</string>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>At the start of your turn, you may exchange 1 card in your hand with 1 card of the same type in your discard pile.</string>
+			</component>
+		</power>
+	</feat>
+</character>
+<character>
+	<name>Merisiel</name>
+	<class>Rogue</class>
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+			<component>
+				<string>d8</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d12</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+
+
+			<component>
+				<string>
+					acrobatics:dexterity+2</string>
+			</component>
+
+			<component>
+				<string>
+					disable:dexterity+2</string>
+			</component>
+			<component>
+				<string>
+					stealth:dexterity+2</string>
+			</component>
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Intelligence</skillname>
+			<component>
+				<string>d4</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>
+					perception:wisdom+2</string>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+			<component>
+				<string>5</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>6</description>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername>Proficient With</powername>
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>Light Armors</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>Weapons</description>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>You may evade your encounter.</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>If you are the only character at your location, you may recharge a card to add 1d6 (</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>nochecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>) to your combat check, or discard it to add an additional 1d6.</string>
+			</component>
+		</power>
+	</feat>
+</character>
 
 </AllCharacters>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<character>
+	<name>Kyra</name>
+	<class>Clearic of Sarenrae</class>
+
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>melee: strength +2</string>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d4</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>fortitude: constitution +3</string>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Intelligence</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+			<component>
+				<string>d12</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>divine: wisdom +2</string>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+
+	
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+			<component>
+				<string>5</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>6</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>7</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>8</description>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername>Proficient With</powername>
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>Light Armors</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>Heavy Armors</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>Weapons</description>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>Instead of your first exploration on a turn, you may reveal a card with the Divine trait to choose a character at your location. Shuffle 1d4+1 (</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notcecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>) random cards from his discard pile into his deck, then discard the card you revealed (</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notcecked</ischecked>
+					<description>and you may draw a card</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>).</string>
+			</component>
+
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<component>
+				<string>Add 1d8 (</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>) with the Magic trait to your check to defeat a bane with the Undead trait.</string>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<component>
+				<checkbox>notchecked</checkbox>
+				<description>Add 2</description>
+			</component>
+
+			<component>
+				<string>(</string>
+			</component>
+			<component>
+				<checkbox>notchecked</checkbox>
+				<description>4</description>
+			</component>
+			<component>
+				<string>) to your check to acquire a boon with the Divine trait.</string>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<component>
+				<ischecked>notchecked</ischecked>
+				<description></description>
+			</component>
+
+			<component>
+				<string>When you play a Blessing of Sarenrae, you may recharge it(</string>
+			</component>
+
+			<component>
+				<checkbox>notchecked</checkbox>
+				<description>or shuffle it into your Deck</description>
+			</component>
+
+			<component>
+				<string>) instead of discarding it.</string>
+			</component>
+		</power>
+	</feat>
+</character>

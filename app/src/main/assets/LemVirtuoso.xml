@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<character>
+	<name>Lem</name>
+	<class>Bard</class>
+
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+			<component>
+				<string>d4</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d8</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Intelligence</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>
+					knowledge:inteligence +3
+				</string>
+			</component>
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+			<component>
+				<string>d6</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+			<component>
+				<string>d10</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+
+
+			<component>
+				<string>
+					arcane:charisma +1
+				</string>
+			</component>
+
+			<component>
+				<string>
+					diplomacy:charisma +3
+				</string>
+			</component>
+			<component>
+				<string>
+					divine:charisma +1
+				</string>
+			</component>
+		</skill>
+	</feat>
+
+
+
+	
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+			<component>
+				<string>6</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>7</description>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername>Proficient With</powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>Light Armors</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>Weapons</description>
+				</checkbox>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>Once per check you may  recharge a card to Add 1d4 (</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>)(</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			
+
+			<component>
+				<string>) to a check attepted by (</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>you or</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>) another character at your location. </string>
+			</component>
+
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<string>At the start </string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>or end</description>
+				</checkbox>
+			</component>
+
+			<component>
+					<string>) of your own turn, you may exchange 1 card in your hand with 1 card of the same type in your discard pile</string>
+			</component>	
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
+			</component>
+			<component>
+				<string>Add 2 to your check to acquire an ally.</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
+			</component>
+			<component>
+				<string>Add 2 to your check to recharge</string>
+			</component>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>or acquire</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>) a spell.</string>
+			</component>
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
+			</component>
+			<component>
+				<string>When you play Blessing of Shelyn, add d12 instead of the normal die.</string>
+			</component>
+		</power>
+	</feat>
+</character>

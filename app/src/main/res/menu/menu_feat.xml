@@ -11,7 +11,7 @@
             android:title="Save" />
     </group>
 
-    <item  android:id="@+id/addfeats"
-        android:title="Add Features"/>
+    <item  android:id="@+id/switchrole"
+        android:title="Switch Role"/>
 
 </menu>

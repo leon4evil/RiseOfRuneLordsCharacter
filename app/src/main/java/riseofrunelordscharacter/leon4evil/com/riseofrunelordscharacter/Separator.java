@@ -36,6 +36,10 @@ public class Separator extends Feat {
     public String getLabel() {
         return "LUIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
     }
+    @Override
+    public void addComponent(IComponent sumComponent, int index){
+
+    }
 
         public static final Parcelable.Creator <Feat> CREATOR = new Parcelable.Creator<Feat>() {
         // This simply calls our new constructor (typically private) and

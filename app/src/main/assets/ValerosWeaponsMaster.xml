@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<character>
+	<name>Valeros</name>
+	<class>Fighter</class>
+
+	<feat>
+		<skill>
+			<skillname>Strength</skillname>
+
+			<component>
+				<string>d10</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>melee: strength+3</string>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Dexterity</skillname>
+			<component>
+				<string>d8</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Constitution</skillname>
+
+			<component>
+				<string>d8</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notcheckec</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>fortitude: constitution+2 </string>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Inteligence</skillname>
+
+			<component>
+				<string>d6</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Wisdom</skillname>
+
+			<component>
+				<string>d4</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<skill>
+			<skillname>Charisma</skillname>
+
+			<component>
+				<string>d6</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>diplomacy: charisma +2</string>
+			</component>
+
+		</skill>
+	</feat>
+
+	<feat>
+		<power>
+			<powername>Hand Size</powername>
+
+			<component>
+				<string>4</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>5</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>6</description>
+				</checkbox>
+			</component>
+
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername>Proficient With</powername>
+
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>light Armours</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>Heavy Armours</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>checked</ischecked>
+					<description>Weapons</description>
+				</checkbox>
+			</component>
+
+		</power>
+	</feat>
+
+	<feat>
+		<power>
+			<powername></powername>
+
+			<component>
+				<string>Add 1d4 (</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+1</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+2</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+3</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+4</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>)(</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>+5</description>
+				</checkbox>
+			</component>
+
+			<component>
+				<string>) to anothers character's combat check at your location.</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		
+		<power>
+			<powername></powername>
+			<component>
+				<string>When you play a weapon, you may recharge it (</string>
+			</component>
+		</power>
+		<component>
+			<checkbox>
+				<ischecked>notchecked</ischecked>
+				<description>or shuffle it into yout deck</description>
+			</checkbox>
+		</component>
+		<component>
+			<string>) instead of discarding it</string>
+		</component>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
+			</component>
+			<component><string>You may use Melee in place of Ranged when using a weapon with the Ranged trait.</string>
+			</component>
+		</power>
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
+			</component>
+			<component>
+				<string>Add 2 (</string>
+			</component>
+
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>4</description>
+				</checkbox>
+			</component>
+			<component>
+				<string>) to your check to aquire a weapon. </string>
+			</component>
+
+		</power>
+
+	</feat>
+	<feat>
+		<power>
+			<powername></powername>
+			<component>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
+			</component>
+			<component>
+				<string>When you play a blessing to add to your Strength check, add d12 instead of the normal die.</string>
+			</component>
+		</power>
+	</feat>
+</character>

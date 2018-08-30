@@ -130,6 +130,48 @@ public class GameCharacter implements Parcelable {
         }
     }
 
+    public void splitStringComponents(){ //will cutdown string components in feats
+                                        // if they are more than 14 characters in length
+        String remainingString;
+        String extractedString;
+        StringComponent macomponent;
+        for(int i = 0; i<characterFeats.size();i++){
+            for(int j = 0; j<characterFeats.get(i).getComponents().size();j++){
+                if(characterFeats.get(i).getComponents().get(j) instanceof StringComponent){
+                    remainingString=  characterFeats.get(i).getComponents().get(j).getDescription();
+                    characterFeats.get(i).getComponents().remove(j);
+                    //j--;
+
+                    int k =14;
+
+                    //for(int i = 14;i<longAssString.length();i++){
+                    while(k<remainingString.length()){
+
+                        if(remainingString.charAt(k)!=' '){
+                            k++;
+                        }
+                        else{
+                            extractedString = remainingString.substring(0,k);
+                            macomponent = new StringComponent(extractedString);
+                            characterFeats.get(i).addComponent(macomponent,j);
+                            j++;
+
+                            remainingString=remainingString.substring(k,remainingString.length());
+                            k=14;
+                            //System.out.println(longAssString.substring(i,longAssString.length()));
+                        }
+
+                    }
+                    macomponent = new StringComponent(remainingString);
+                    characterFeats.get(i).addComponent(macomponent,j);
+                    //j++;
+                }
+            }
+        }
+    }
+
+
+
     public String printGameCharacter(){
         //Log.d("Ma Name Is ", name); instead of the log we'll show this in a text field
         String characterString = "<character>\n"+
@@ -158,7 +200,6 @@ public class GameCharacter implements Parcelable {
         }
 
     }
-
     //Reading
     public GameCharacter(Parcel in){
         characterName = in.readString();
@@ -171,9 +212,7 @@ public class GameCharacter implements Parcelable {
         else{
             this.selected = true;
         }
-
     }
-
     //Others
     @Override
     public int describeContents() {

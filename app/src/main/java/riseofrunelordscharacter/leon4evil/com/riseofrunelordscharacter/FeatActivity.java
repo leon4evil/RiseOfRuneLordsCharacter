@@ -2,6 +2,8 @@ package riseofrunelordscharacter.leon4evil.com.riseofrunelordscharacter;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +22,7 @@ public class FeatActivity extends AppCompatActivity {
     GameCharacter maCharacter;
     Menu menu;
     File thischaracterfile;
+    String pathtofile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +31,8 @@ public class FeatActivity extends AppCompatActivity {
         //Gathering data from previeous activity
         Bundle data = getIntent().getExtras();
         maCharacter = getIntent().getParcelableExtra("clickedCharacter");
-        String pathtofile = data.getString("associatedfile");
+        pathtofile = data.getString("associatedfile");
+        Log.d("whats my path to file?",pathtofile);
         thischaracterfile = new File(pathtofile);
         //thischaracterfile.delete();
 
@@ -45,6 +49,9 @@ public class FeatActivity extends AppCompatActivity {
 
         //Always order feats before handing to adapter(orders and adds separators)
         maCharacter.orderFeats();
+
+        //Cut down string components in feats that are too long
+        maCharacter.splitStringComponents();
 
 
 
@@ -102,9 +109,29 @@ public class FeatActivity extends AppCompatActivity {
                 startActivity(getIntent());
                 return true;
 
-            case R.id.addfeats:
+            case R.id.switchrole:
+               FragmentManager fm = getSupportFragmentManager();
+               SwitchRoleDialog dialog = new SwitchRoleDialog();
 
-                Toast.makeText(getApplicationContext(), "Not Implemented yet", Toast.LENGTH_SHORT).show();
+               Bundle bundle = new Bundle();
+               bundle.putString("character name", maCharacter.getCharacterName()); //pass data to dialog fragment
+                bundle.putString("associatedfile",pathtofile);
+
+               dialog.setArguments(bundle);
+               dialog.show(fm, "switchrole");
+
+//                FragmentManager fm2 = getSupportFragmentManager();
+//                DialogFragment seconddialog = new AreyouSureDialog();
+//                Bundle bundle2 = new Bundle();
+//                bundle2.putString("character name", maCharacter.getCharacterName()); //pass data to dialog fragment
+//                bundle2.putString("associatedfile",pathtofile);
+//
+//                seconddialog.setArguments(bundle2);
+//                seconddialog.show(fm2, "areyousure");
+
+
+
+
                 return true;
 
             default:

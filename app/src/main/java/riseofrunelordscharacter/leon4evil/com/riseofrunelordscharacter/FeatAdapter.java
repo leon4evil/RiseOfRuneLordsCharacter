@@ -98,7 +98,7 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
 
 
             feattextview.setTextColor(Color.parseColor("#808080"));
-            listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(parent.getWidth()),(int)(119*parent.getContext().getResources().getDisplayMetrics().density)));
+            listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(parent.getWidth()),(int)(135*parent.getContext().getResources().getDisplayMetrics().density)));
 
 
             //show feat and its components
@@ -141,13 +141,14 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
                             }
                         }
                     });
-
+                    //macomponentcheckbox.setMaxHeight(100);
                     maFlexboxLayout.addView(macomponentcheckbox);
                     Log.d("checkbox","checkbox added to layout!!!");
 
                 }else{//not a checkbox then
                     TextView macomponenttextview = new TextView(parent.getContext());
                     macomponenttextview.setGravity(Gravity.CENTER);
+                    //macomponenttextview.setMaxHeight(100);
                     macomponenttextview.setText(feat.getComponents().get(i).getDescription());
                     maFlexboxLayout.addView(macomponenttextview);
                 }

@@ -26,9 +26,10 @@ public class CharacterBuilder {
 
     //this constructor takes only a file name but wont do anything if the actual file is not in assets
     public CharacterBuilder(String XMLFilename,Context givenContext) { //this will build a character from an XML File
-        try {                                                       //in the assets foulder
+        try {                                                       //in the assets folder
             AssetManager assetmngr = givenContext.getAssets();
-            maStream = assetmngr.open(XMLFilename);//*this.openFileInput("sajan.xml");*/
+
+            maStream = assetmngr.open(XMLFilename);
             if (maStream != null) {
                 maReader = new InputStreamReader(maStream);
             }
@@ -38,7 +39,7 @@ public class CharacterBuilder {
             Log.d("Main Activity", "Cannot read File");
         }
     }
-    //contructor that is given a file
+    //constructor that is given a file
     public CharacterBuilder(File givenfile,Context givenContext ){
 
         maCurrentFile = givenfile;
@@ -102,7 +103,6 @@ public class CharacterBuilder {
                     if(lastTag.equals("description")){
                         //currentComponent
                     }
-
                     Log.d("main Activity", "Start Tag " + lastTag);
 
                 } else if (eventType == XmlPullParser.END_TAG) { //When we're at a closing tag
@@ -162,7 +162,6 @@ public class CharacterBuilder {
                             ((CheckboxComponent) currentComponent).setChecked(false);
                         }
                     }
-
 
                     Log.d("Main Activity", "Text " + currentString);
                 }

@@ -39,7 +39,7 @@ public class Skill extends Feat {
 
 
 
-    //Getters
+    //getters
     public void setName(String name) {
         this.name = name;
     }
@@ -49,12 +49,11 @@ public class Skill extends Feat {
         return getName();
     }
 
-    //Setters
-    public String getName() {
-        return name;
+    @Override
+    public List<IComponent> getComponents(){
+        return skillComponents;
     }
 
-    //getters
     public int getBasedie() {
         return basedie;
     }
@@ -64,6 +63,10 @@ public class Skill extends Feat {
     }
 
     //setters
+    public String getName() {
+        return name;
+    }
+
     public void setBasedie(int basedie) {
         this.basedie = basedie;
     }
@@ -71,12 +74,8 @@ public class Skill extends Feat {
     public void setAdded(int added) {
         this.added = added;
     }
-//    @Override
-//    public void printFeat(){
-//        Log.d("type of Feat","Ima skill");
-//
-//    }
 
+    //others
     public String printFeat(){
 
         //Log.d("Feat name is: ", skillname);
@@ -95,13 +94,13 @@ public class Skill extends Feat {
     }
 
     @Override
-    public List<IComponent> getComponents(){
-        return skillComponents;
-
-    }
-    @Override
     public void addComponents(List<IComponent> givenComponentList){
         skillComponents = new ArrayList<IComponent>(givenComponentList);
+    }
+
+    @Override
+    public void addComponent(IComponent sumComponent, int index){
+        skillComponents.add(index,sumComponent);
     }
 
     /////////////////Parceling part/////////////////////////
@@ -180,7 +179,7 @@ public class Skill extends Feat {
 
     }
 
-    //Others
+    //others
 
     @Override
     public int describeContents() {
