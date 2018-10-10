@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -38,10 +39,21 @@ public class GameCharacterAdapter extends ArrayAdapter<GameCharacter> {
         }
         GameCharacter maGameCharacter = getItem(position);
 
-        //TODO add image view with character pic
-        /* //Add ImageView
-            ImageView miwokimageview = (ImageView) listItemView.findViewById(R.id.image);*/
 
+        //Add ImageView
+
+        String imageFilename = (RoleExtractor.getJustName(maGameCharacter.getCharacterName())).toLowerCase(); //no extension necessary on file name
+        Log.d("Image that shoud be",imageFilename);
+        int maid = parent.getResources().getIdentifier(imageFilename,"drawable",getContext().getPackageName());
+        Log.d("package  is",getContext().getPackageName());
+        Log.d("ID is",String.valueOf(maid));
+
+        ImageView gameCharacterImageView = (ImageView) listItemView.findViewById(R.id.photoImageView);
+        gameCharacterImageView.setImageResource(maid);
+
+        if(maGameCharacter instanceof NewGameCharacter){
+            gameCharacterImageView.setImageResource(R.drawable.new_character);
+        }
 
         TextView characterTextview = (TextView) listItemView.findViewById(R.id.nameTextView);
         characterTextview.setText(maGameCharacter.getCharacterName());

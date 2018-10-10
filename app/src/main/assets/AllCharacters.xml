@@ -1674,17 +1674,14 @@
 
 
 			<component>
-				<string>
-					acrobatics:dexterity+2</string>
+				<string>acrobatics:dexterity+2</string>
 			</component>
 
 			<component>
-				<string>
-					disable:dexterity+2</string>
+				<string>disable:dexterity+2</string>
 			</component>
 			<component>
-				<string>
-					stealth:dexterity+2</string>
+				<string>stealth:dexterity+2</string>
 			</component>
 		</skill>
 	</feat>

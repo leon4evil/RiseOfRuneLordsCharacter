@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -66,6 +67,9 @@ public class MainActivity extends AppCompatActivity {
         listview.setAdapter(adapter);
 
 
+        //GestureDetector madetector = new GestureDetector(this,GestureDetector.OnGestureListener);
+
+
         //make em clickable
         listview.setOnItemClickListener(new OnItemClickListener(){
             @Override
@@ -86,12 +90,22 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         }
                         else{
+                            //selectionmode =false;
+                            //clickedCharacter.setSelected(false);
+                            //adapter.updatemode(selectionmode);
                             menu.getItem(0).setVisible(false);
+                            selectionmode =false;
+                            setTitle("Rise Of Runelords");
+
+                            //break;
                         }
                     }
                     adapter.notifyDataSetChanged();
+                    //return; //dirty
+
                 }
-                if(!selectionmode) {
+                //if(!selectionmode) {
+                else{
                     if (clickedCharacter.getCharacterName().equals("New Character")) {
                         Intent newCharacterIntent = new Intent(MainActivity.this, NewCharacterActivity.class);
                         startActivity(newCharacterIntent);
@@ -110,6 +124,22 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+        });
+
+        listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long l) {
+                GameCharacter clickedCharacter = (GameCharacter) listview.getItemAtPosition(position);
+                if(!selectionmode && !(clickedCharacter instanceof NewGameCharacter)) {
+                    setTitle("Select");
+                    clickedCharacter.setSelected(true);
+                    selectionmode = true;
+                    menu.getItem(0).setVisible(true);
+                    adapter.updatemode(selectionmode);
+                    adapter.notifyDataSetChanged();
+                }
+                return true;
+            }
         });
 
     }
@@ -150,11 +180,11 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.item1:
                 if(currentCharacters.size()>1) {
-                Toast.makeText(getApplicationContext(),"Select",Toast.LENGTH_SHORT).show();
-                setTitle("Select");
-                selectionmode = true;
-                adapter.updatemode(selectionmode);
-                adapter.notifyDataSetChanged();
+                    Toast.makeText(getApplicationContext(),"Select",Toast.LENGTH_SHORT).show();
+                    setTitle("Select");
+                    selectionmode = true;
+                    adapter.updatemode(selectionmode);
+                    adapter.notifyDataSetChanged();
                 }else{
                     Toast.makeText(getApplicationContext(),"Nothing to select.",Toast.LENGTH_SHORT).show();
                 }
@@ -166,11 +196,11 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Select all",Toast.LENGTH_SHORT).show();
                     setTitle("Select");
                     selectionmode = true;
-                for ( int i=0; i+1 < currentCharacters.size(); i++) {
-                    currentCharacters.get(i).setSelected(true);
-                }
-                adapter.updatemode(selectionmode);
-                adapter.notifyDataSetChanged();
+                    for ( int i=0; i+1 < currentCharacters.size(); i++) {
+                        currentCharacters.get(i).setSelected(true);
+                    }
+                    adapter.updatemode(selectionmode);
+                    adapter.notifyDataSetChanged();
                     this.menu.getItem(0).setVisible(true);
                 }
                 else{

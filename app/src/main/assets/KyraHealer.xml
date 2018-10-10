@@ -255,6 +255,7 @@
 
 	<feat>
 		<power>
+			<powername></powername>
 			<component>
 				<string>Add 1d8 (</string>
 			</component>
@@ -272,17 +273,22 @@
 
 	<feat>
 		<power>
+			<powername></powername>
 			<component>
-				<checkbox>notchecked</checkbox>
-				<description>Add 2</description>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>Add 2</description>
+				</checkbox>
 			</component>
 
 			<component>
 				<string>(</string>
 			</component>
 			<component>
-				<checkbox>notchecked</checkbox>
-				<description>4</description>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>4</description>
+				</checkbox>
 			</component>
 			<component>
 				<string>) to your check to acquire a boon with the Divine trait.</string>
@@ -293,8 +299,10 @@
 	<feat>
 		<power>
 			<component>
-				<ischecked>notchecked</ischecked>
-				<description></description>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
 			</component>
 
 			<component>
@@ -302,8 +310,10 @@
 			</component>
 
 			<component>
-				<checkbox>notchecked</checkbox>
-				<description>or shuffle it into your Deck</description>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>or shuffle it into your Deck</description>
+				</checkbox>
 			</component>
 
 			<component>

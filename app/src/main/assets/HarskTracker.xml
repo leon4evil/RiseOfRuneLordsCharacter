@@ -271,6 +271,7 @@
 
 	<feat>
 		<power>
+			<powername></powername>
 			<component>
 				<checkbox>
 					<ischecked>notchecked</ischecked>
@@ -297,7 +298,7 @@
 	
 	<feat>
 		<power>
-			
+			<powername></powername>
 			<component>
 				<checkbox>notchecked</checkbox>
 				<description></description>
@@ -310,6 +311,7 @@
 
 	<feat>
 		<power>
+			<powername></powername>
 			<component>
 				<checkbox>
 				<ischecked>notchecked</ischecked>
@@ -325,6 +327,7 @@
 
 	<feat>
 		<power>
+			<powername></powername>
 			<component>
 				<checkbox>
 					<ischecked>notchecked</ischecked>

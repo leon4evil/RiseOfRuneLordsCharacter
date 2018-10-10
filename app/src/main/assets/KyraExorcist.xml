@@ -227,6 +227,7 @@
 
 	<feat>
 		<power>
+			<powername></powername>
 			<component>
 				<string>Add 1d8 (</string>
 			</component>
@@ -253,6 +254,7 @@
 
 	<feat>
 		<power>
+			<powername></powername>
 			<component>
 				<checkbox>notchecked</checkbox>
 				<description></description>
@@ -273,6 +275,7 @@
 
 	<feat>
 		<power>
+			<powername></powername>
 			<component>
 				<checkbox>
 				<ischecked>notchecked</ischecked>
@@ -298,6 +301,7 @@
 	</feat>
 	<feat>
 		<power>
+			<powername></powername>
 			<component>
 				<checkbox>
 				<ischecked>notchecked</ischecked>

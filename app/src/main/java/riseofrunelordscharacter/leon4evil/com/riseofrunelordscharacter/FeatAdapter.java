@@ -83,7 +83,8 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
             TextView feattextview = (TextView) listItemView.findViewById(R.id.textview);
             feattextview.setText(feat.getName()+"s");
             feattextview.setTextColor(Color.WHITE);  //text color
-            listItemView.setBackgroundColor(Color.BLACK);//backgorund color
+            feattextview.setTextSize(20);
+            listItemView.setBackgroundColor(Color.BLACK);//background color
             //modifying size of listview Item if its a separator
             //listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(330*parent.getContext().getResources().getDisplayMetrics().density),100));
             listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(parent.getWidth()),100));
@@ -93,12 +94,13 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
             if(((FlexboxLayout) maFlexboxLayout).getChildCount() > 0) { //clear layout in current listviewItem
                 ((FlexboxLayout) maFlexboxLayout).removeAllViews();
             }
-            listItemView.setBackgroundColor(Color.WHITE);
+            listItemView.setBackgroundColor(Color.parseColor("#380474"));
             TextView feattextview = (TextView) listItemView.findViewById(R.id.textview);
 
 
-            feattextview.setTextColor(Color.parseColor("#808080"));
-            listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(parent.getWidth()),(int)(135*parent.getContext().getResources().getDisplayMetrics().density)));
+            feattextview.setTextColor(Color.WHITE);
+            feattextview.setTextSize(17);
+            listItemView.setLayoutParams(new LinearLayout.LayoutParams((int)(parent.getWidth()),(int)(155*parent.getContext().getResources().getDisplayMetrics().density)));
 
 
             //show feat and its components
@@ -115,6 +117,8 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
                     macomponentcheckbox.setFocusable(false);
                     macomponentcheckbox.setText(feat.getComponents().get(i).getDescription()); //if there is a description for the checkbox
                     macomponentcheckbox.setChecked(checkboxIsCheckedlist.get(position).get(i));//if it was checked before check it
+                    macomponentcheckbox.setButtonTintList(parent.getContext().getResources().getColorStateList(R.color.checkbox_colors));
+                    macomponentcheckbox.setTextColor(Color.WHITE);
                     //when it comes to screen
                     macomponentcheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                         @Override
@@ -147,9 +151,11 @@ public class FeatAdapter extends ArrayAdapter<Feat> {
 
                 }else{//not a checkbox then
                     TextView macomponenttextview = new TextView(parent.getContext());
+                    macomponenttextview.setTextColor(Color.WHITE);
                     macomponenttextview.setGravity(Gravity.CENTER);
                     //macomponenttextview.setMaxHeight(100);
                     macomponenttextview.setText(feat.getComponents().get(i).getDescription());
+                    macomponenttextview.setPadding(7,0,7,0);
                     maFlexboxLayout.addView(macomponenttextview);
                 }
             }

@@ -303,7 +303,7 @@
 				</checkbox>
 			</component>
 			<component>
-				<string>Add 2 to your check to recharge</string>
+				<string>Add 2 to your check to recharge (</string>
 			</component>
 			<component>
 				<checkbox>

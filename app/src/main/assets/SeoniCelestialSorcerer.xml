@@ -255,8 +255,10 @@
 		<power>
 			<powername></powername>
 			<component>
-				<checkbox>notchecked</checkbox>
-				<description></description>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
 			</component>
 
 			<component>
@@ -269,8 +271,10 @@
 		<power>
 			<powername></powername>
 			<component>
-				<ischecked>notchecked</ischecked>
-				<description>Reduce Fire</description>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>Reduce Fire</description>
+				</checkbox>
 			</component>
 
 			<component>
@@ -278,8 +282,10 @@
 			</component>
 
 			<component>
-				<ischecked>notchecked</ischecked>
-				<description>and Electricity</description>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description>and Electricity</description>
+				</checkbox>
 			</component>
 
 			<component>
@@ -302,8 +308,10 @@
 		<power>
 			<powername></powername>
 			<component>
-				<checkbox>notchecked</checkbox>
-				<description></description>
+				<checkbox>
+					<ischecked>notchecked</ischecked>
+					<description></description>
+				</checkbox>
 			</component>
 
 			<component>

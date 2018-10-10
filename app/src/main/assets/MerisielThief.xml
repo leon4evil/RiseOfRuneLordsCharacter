@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <character>
-	<name>Merisel</name>
+	<name>Merisiel</name>
 	<class>Thief</class>
 
 	<feat>
@@ -65,20 +65,14 @@
 
 
 			<component>
-				<string>
-					acrobatics:dexterity+2
-				</string>
+				<string>acrobatics:dexterity+2</string>
 			</component>
 
 			<component>
-				<string>
-					disable:dexterity+2
-				</string>
+				<string>disable:dexterity+2</string>
 			</component>
 			<component>
-				<string>
-					stealth:dexterity+2
-				</string>
+				<string>stealth:dexterity+2</string>
 			</component>
 		</skill>
 	</feat>
@@ -290,8 +284,8 @@
 			</component>
 			<component>
 				<checkbox>
-				<checkbox>notchecked</checkbox>
-				<description>3</description>
+					<ischecked>notchecked</ischecked>
+					<description>3</description>
 				</checkbox>
 			</component>
 			<component>
