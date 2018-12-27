@@ -263,7 +263,7 @@
 		<power>
 			<powername></powername>
 			<component>
-				<string>At the start </string>
+				<string>At the start (</string>
 			</component>
 
 			<component>

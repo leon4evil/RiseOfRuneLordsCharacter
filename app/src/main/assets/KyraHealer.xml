@@ -298,6 +298,7 @@
 
 	<feat>
 		<power>
+			<powername></powername>
 			<component>
 				<checkbox>
 					<ischecked>notchecked</ischecked>
