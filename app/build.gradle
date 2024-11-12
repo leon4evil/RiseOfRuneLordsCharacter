@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdk 34
     defaultConfig {
-        applicationId "riseofrunelordscharacter.leon4evil.com.riseofrunelordscharacter"
-        minSdkVersion 21
-        targetSdkVersion 27
+        namespace "riseofrunelordscharacter.leon4evil.com.riseofrunelordscharacter"
+        minSdkVersion 24
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

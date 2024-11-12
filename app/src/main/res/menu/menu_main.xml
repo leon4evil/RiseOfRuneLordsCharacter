@@ -1,21 +1,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.leon4evil.riseofrunelordscharacter.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- "Mark Favorite", should appear as action button if possible -->
-    <group
-        android:id="@+id/on_select">
+    <group android:id="@+id/on_select">
         <item
             android:id="@+id/action_favorite"
             android:icon="@drawable/lil_trash_can_white"
             android:title="liltrashcan"
-            app:showAsAction="ifRoom"
-            />
+            app:showAsAction="ifRoom" />
     </group>
 
-    <item  android:id="@+id/item1"
-        android:title="Select"/>
-    <item  android:id="@+id/item2"
-        android:title="Select All"/>
+    <item
+        android:id="@+id/item1"
+        android:title="Select" />
+    <item
+        android:id="@+id/item2"
+        android:title="Select All" />
 
 </menu>

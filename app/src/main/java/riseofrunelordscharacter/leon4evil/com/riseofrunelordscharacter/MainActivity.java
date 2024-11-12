@@ -158,8 +158,7 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        switch(id){
-            case R.id.action_favorite:
+        if(id == R.id.action_favorite){
                 Toast.makeText(getApplicationContext(),"Deleted", Toast.LENGTH_SHORT).show();
                 Log.d("the error is","ASSS");
                 int currentsize = currentCharacters.size()-1;
@@ -177,38 +176,38 @@ public class MainActivity extends AppCompatActivity {
                 adapter.notifyDataSetChanged();
                 this.menu.getItem(0).setVisible(false);
                 return true;
+        }
 
-            case R.id.item1:
-                if(currentCharacters.size()>1) {
-                    Toast.makeText(getApplicationContext(),"Select",Toast.LENGTH_SHORT).show();
-                    setTitle("Select");
-                    selectionmode = true;
-                    adapter.updatemode(selectionmode);
-                    adapter.notifyDataSetChanged();
-                }else{
-                    Toast.makeText(getApplicationContext(),"Nothing to select.",Toast.LENGTH_SHORT).show();
+        else if(id == R.id.item1) {
+            if (currentCharacters.size() > 1) {
+                Toast.makeText(getApplicationContext(), "Select", Toast.LENGTH_SHORT).show();
+                setTitle("Select");
+                selectionmode = true;
+                adapter.updatemode(selectionmode);
+                adapter.notifyDataSetChanged();
+            } else {
+                Toast.makeText(getApplicationContext(), "Nothing to select.", Toast.LENGTH_SHORT).show();
+            }
+            return true;
+        }
+        else if (id == R.id.item2) {
+            if (currentCharacters.size() > 1) {
+                Toast.makeText(getApplicationContext(), "Select all", Toast.LENGTH_SHORT).show();
+                setTitle("Select");
+                selectionmode = true;
+                for (int i = 0; i + 1 < currentCharacters.size(); i++) {
+                    currentCharacters.get(i).setSelected(true);
                 }
-                return true;
-
-            case R.id.item2:
-
-                if(currentCharacters.size()>1){
-                    Toast.makeText(getApplicationContext(),"Select all",Toast.LENGTH_SHORT).show();
-                    setTitle("Select");
-                    selectionmode = true;
-                    for ( int i=0; i+1 < currentCharacters.size(); i++) {
-                        currentCharacters.get(i).setSelected(true);
-                    }
-                    adapter.updatemode(selectionmode);
-                    adapter.notifyDataSetChanged();
-                    this.menu.getItem(0).setVisible(true);
-                }
-                else{
-                    Toast.makeText(getApplicationContext(),"Nothing to select.",Toast.LENGTH_SHORT).show();
-                }
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+                adapter.updatemode(selectionmode);
+                adapter.notifyDataSetChanged();
+                this.menu.getItem(0).setVisible(true);
+            } else {
+                Toast.makeText(getApplicationContext(), "Nothing to select.", Toast.LENGTH_SHORT).show();
+            }
+            return true;
+        }
+        else{
+            return super.onOptionsItemSelected(item);
         }
 
     }

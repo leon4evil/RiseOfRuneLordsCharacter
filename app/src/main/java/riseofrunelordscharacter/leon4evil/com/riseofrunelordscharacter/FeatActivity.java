@@ -28,7 +28,7 @@ public class FeatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feat);
 
-        //Gathering data from previeous activity
+        //Gathering data from previous activity
         Bundle data = getIntent().getExtras();
         maCharacter = getIntent().getParcelableExtra("clickedCharacter");
         pathtofile = data.getString("associatedfile");
@@ -65,8 +65,7 @@ public class FeatActivity extends AppCompatActivity {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
-            public void onItemClick(AdapterView<?> adapter, View v, int position,
-                                    long arg3)
+            public void onItemClick(AdapterView<?> adapter, View v, int position, long arg3)
             {
                 featsInCharacter(maCharacter);
             }
@@ -76,7 +75,7 @@ public class FeatActivity extends AppCompatActivity {
 
 
     }
-    //TODO save state stuff so activity doesnt restart on rotate
+    //TODO save state stuff so activity doesn't restart on rotate
 
     public void featsInCharacter(GameCharacter givenCharacter) {
         Log.d("ON FEAT ACTIVITY","TRIPLE TRIPLE TRIPLE ASSSSSSSSSSSSSSSSSSSSS");
@@ -99,26 +98,26 @@ public class FeatActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        switch (id) {
-            case R.id.save:
-                Toast.makeText(getApplicationContext(), "Saved Character", Toast.LENGTH_SHORT).show();
-                thischaracterfile.delete();
-                CharacterSaver maSaver = new CharacterSaver(maCharacter, this);
-                maSaver.saveToFile();
-                finish();
-                startActivity(getIntent());
-                return true;
 
-            case R.id.switchrole:
-               FragmentManager fm = getSupportFragmentManager();
-               SwitchRoleDialog dialog = new SwitchRoleDialog();
+        if (id == R.id.save) {
+            Toast.makeText(getApplicationContext(), "Saved Character", Toast.LENGTH_SHORT).show();
+            thischaracterfile.delete();
+            CharacterSaver maSaver = new CharacterSaver(maCharacter, this);
+            maSaver.saveToFile();
+            finish();
+            startActivity(getIntent());
+            return true;
+        }
+        else if (id == R.id.switchrole) {
+            FragmentManager fm = getSupportFragmentManager();
+            SwitchRoleDialog dialog = new SwitchRoleDialog();
 
-               Bundle bundle = new Bundle();
-               bundle.putString("character name", maCharacter.getCharacterName()); //pass data to dialog fragment
-                bundle.putString("associatedfile",pathtofile);
+            Bundle bundle = new Bundle();
+            bundle.putString("character name", maCharacter.getCharacterName()); //pass data to dialog fragment
+            bundle.putString("associatedfile", pathtofile);
 
-               dialog.setArguments(bundle);
-               dialog.show(fm, "switchrole");
+            dialog.setArguments(bundle);
+            dialog.show(fm, "switchrole");
 
 //                FragmentManager fm2 = getSupportFragmentManager();
 //                DialogFragment seconddialog = new AreyouSureDialog();
@@ -130,12 +129,10 @@ public class FeatActivity extends AppCompatActivity {
 //                seconddialog.show(fm2, "areyousure");
 
 
-
-
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
+            return true;
+        }
+        else {
+            return super.onOptionsItemSelected(item);
         }
     }
 
